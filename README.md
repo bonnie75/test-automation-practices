@@ -1,2 +1,12 @@
 # test-automation-practices
-storing all my lessons on cypress, appium, and robot framework here.  each folder will have a test plan for automation testing a specific platform.
+This repository is a sub page of my technical portfolio.  I am self-teaching how to use Cypress, Appium, and Robot Framework.
+Below you will find test plans on how each of these tools will be used.
+
+# cypress test sites
+1.  using the ToolsQA https://demoqa.com/text-box 
+2.  using the Formy test site https://formy-project.herokuapp.com/
+
+# appium test sites
+
+
+# robot framework test sites
