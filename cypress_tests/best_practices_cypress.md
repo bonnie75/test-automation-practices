@@ -7,3 +7,4 @@ So let's not waste another minute, and check out some best practices below that 
 1.  always include a `describe` or `context` function at the beginning of each test suite to describe what the entire suite of tests are intended to do.
 2.  likewise, always make sure `it` or `specify` also describes clearly what the individual test is testing.
 3.  make sure your test passes on its own without relying on a previous test.
+4.  keep the test file of tests short, less than 10 tests would help manage tests in the future.
