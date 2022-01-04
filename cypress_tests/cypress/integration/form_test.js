@@ -1,16 +1,20 @@
 /// <reference types="cypress" />
 
+Cypress.Commands.add('fillRequiredFields', (user) => {
+    cy.get('#firstName').type(user.first)
+    cy.get('#lastName').type(user.last)
+    cy.get('.custom-control.custom-radio.custom-control-inline [type="radio"]').check(user.gender, {force:true})
+    cy.get('#userNumber').type(user.phone)
+  })
+
 describe('Submitting a Student form', () => {
     beforeEach(() => {
         cy.visit('https://demoqa.com/automation-practice-form')
-        cy.get('#firstName').type("Andy")
-        cy.get('#lastName').type("Fake")
-        cy.get('.custom-control.custom-radio.custom-control-inline [type="radio"]').check('Male', {force:true})
-        cy.get('#userNumber').type('4441231234')
     })
 
     it('can enter valid values in text fields', () => {
-        cy.get('#userEmail').type("andy.fake@fake.ca")
+        cy.fillRequiredFields({ first: 'Allie', last: 'Kat', gender: 'Female', phone: '4441231234' })
+        cy.get('#userEmail').type("allie.fake@fake.ca")
         cy.get('.custom-control.custom-checkbox.custom-control-inline [type="checkbox"]').check('2', {force:true})
         cy.get('#currentAddress').type('2 berkeley street, Toronto, ON M5A 1B2')
 
@@ -19,26 +23,27 @@ describe('Submitting a Student form', () => {
     })
 
     it('can select multiple hobbies checkboxes', () => {
-        cy.get('#userEmail').type("andy.fake@fake.ca")
+        cy.fillRequiredFields({ first: 'Allie', last: 'Kat', gender: 'Female', phone: '4441231234' })
         cy.get('.custom-control.custom-checkbox.custom-control-inline [type="checkbox"]').check('1', {force:true})
         cy.get('.custom-control.custom-checkbox.custom-control-inline [type="checkbox"]').check('2', {force:true})
         cy.get('.custom-control.custom-checkbox.custom-control-inline [type="checkbox"]').check('3', {force:true})
     
         cy.get('#submit').click()
-        cy.get('.modal-content').should('is.visible')
+        cy.get('.modal-content').should('be.visible')
             .contains('Sports, Reading, Music')
     })
 
     it('can select one hobbies checkbox', () => {
-        cy.get('#userEmail').type("andy.fake@fake.ca")
+        cy.fillRequiredFields({ first: 'Allie', last: 'Kat', gender: 'Female', phone: '4441231234' })
         cy.get('.custom-control.custom-checkbox.custom-control-inline [type="checkbox"]').check('3', {force:true})
 
         cy.get('#submit').click()
-        cy.get('.modal-content').should('is.visible')
+        cy.get('.modal-content').should('be.visible')
             .contains('Music')
     })
 
     it('can upload a file with image extension', () => {
+        cy.fillRequiredFields({ first: 'Allie', last: 'Kat', gender: 'Female', phone: '4441231234' })
         cy.get('#uploadPicture').attachFile('cypresslogosm.jpg')
 
         cy.get('#submit').click()
@@ -47,6 +52,7 @@ describe('Submitting a Student form', () => {
     })
     
     it('does not upload a file that is not an image', () => {
+        cy.fillRequiredFields({ first: 'Allie', last: 'Kat', gender: 'Female', phone: '4441231234' })
         cy.get('#uploadPicture').attachFile('example.json')
 
         cy.get('#submit').click()
@@ -55,6 +61,7 @@ describe('Submitting a Student form', () => {
     })
 
     it('can select and display the date of birth', () => {
+        cy.fillRequiredFields({ first: 'Allie', last: 'Kat', gender: 'Female', phone: '4441231234' })
         cy.get('#dateOfBirth').click()
         cy.get('.react-datepicker__month-select').select('May')
         cy.get('.react-datepicker__year-select').select('1957')
@@ -66,6 +73,7 @@ describe('Submitting a Student form', () => {
     })
 
     it('can type in a date of birth', () => {
+        cy.fillRequiredFields({ first: 'Allie', last: 'Kat', gender: 'Female', phone: '4441231234' })
         cy.get('#dateOfBirthInput').dblclick()
             .type('January 1, 1988')
 
@@ -75,6 +83,7 @@ describe('Submitting a Student form', () => {
     })
 
     it('should not be able to enter non-date values', () => {
+        cy.fillRequiredFields({ first: 'Allie', last: 'Kat', gender: 'Female', phone: '4441231234' })
         cy.get('#dateOfBirthInput').click()
             .type('test field {enter}')
 
@@ -84,6 +93,7 @@ describe('Submitting a Student form', () => {
     })
 
     it('should select State before City', () => {
+        cy.fillRequiredFields({ first: 'Allie', last: 'Kat', gender: 'Female', phone: '4441231234' })
         cy.get('#react-select-4-input').should('be.disabled')
         cy.get('#react-select-3-input').type('NCR {enter}', {force:true}).tab()
         cy.get('#react-select-4-input').type('Delhi {enter}', {force:true}).should('be.enabled')
