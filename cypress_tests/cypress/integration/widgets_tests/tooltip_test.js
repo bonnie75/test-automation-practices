@@ -15,12 +15,12 @@ describe('Tooltips on hover', () => {
             element: 'text field',
             elementname: '#toolTipTextField',
             attribute: 'textFieldToolTip'
-        },
-        {
+        }
+       /* {
             element: 'text',
             elementname: '#data-cy-test',   //SOLUTION: should add data-attributes on <a> element to find tooltip
             attribute: 'contraryTexToolTip'
-        }]
+        }*/]
 
     Tooltips.forEach((element) => {
         it(`tooltip on ${element.element} hover`, () => {
