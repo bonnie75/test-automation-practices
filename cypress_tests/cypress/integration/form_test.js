@@ -51,7 +51,7 @@ describe('Submitting a Student form', () => {
             .contains('cypresslogosm.jpg')
     })
     
-    it('does not upload a file that is not an image', () => {
+    it.skip('does not upload a file that is not an image', () => {
         cy.fillRequiredFields({ first: 'Allie', last: 'Kat', gender: 'Female', phone: '4441231234' })
         cy.get('#uploadPicture').attachFile('example.json')
 
@@ -72,7 +72,7 @@ describe('Submitting a Student form', () => {
             .contains('04 May,1957')
     })
 
-    it('can type in a date of birth', () => {
+    it.skip('can type in a date of birth', () => {
         cy.fillRequiredFields({ first: 'Allie', last: 'Kat', gender: 'Female', phone: '4441231234' })
         cy.get('#dateOfBirthInput').dblclick()
             .type('January 1, 1988')
@@ -82,7 +82,7 @@ describe('Submitting a Student form', () => {
             .contains('01 January,1988')
     })
 
-    it('should not be able to enter non-date values', () => {
+    it.skip('should not be able to enter non-date values', () => {
         cy.fillRequiredFields({ first: 'Allie', last: 'Kat', gender: 'Female', phone: '4441231234' })
         cy.get('#dateOfBirthInput').click()
             .type('test field {enter}')
