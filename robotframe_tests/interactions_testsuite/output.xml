@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.8.0 on win32)" generated="20220114 12:45:41.561" rpa="false" schemaversion="2">
+<suite id="s1" name="Interactions Testsuite" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\interactions_testsuite">
+<suite id="s1-s1" name="Addbutton Test" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\interactions_testsuite\addbutton_test.robot">
+<test id="s1-s1-t1" name="Add One Button">
+<kw name="Go To Practice Page" library="interact_resource" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${interactpage}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 12:45:41.968" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/add_remove_elements/'.</msg>
+<status status="PASS" starttime="20220114 12:45:41.968" endtime="20220114 12:45:44.151"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:41.967" endtime="20220114 12:45:44.152"/>
+</kw>
+<kw name="Add Delete Button">
+<arg>1</arg>
+<kw name="Repeat Keyword" library="BuiltIn">
+<arg>${count}</arg>
+<arg>Click Add Element Button</arg>
+<doc>Executes the specified keyword multiple times.</doc>
+<msg timestamp="20220114 12:45:44.155" level="INFO">Repeating keyword, round 1/1.</msg>
+<kw name="Click Add Element Button" library="interact_resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[contains(text(),'Add Element')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 12:45:44.157" level="INFO">Clicking button '//button[contains(text(),'Add Element')]'.</msg>
+<status status="PASS" starttime="20220114 12:45:44.156" endtime="20220114 12:45:44.264"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:44.155" endtime="20220114 12:45:44.264"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:44.154" endtime="20220114 12:45:44.264"/>
+</kw>
+<kw name="Multiple Delete Buttons Should Be Visible" library="interact_resource">
+<arg>${count}</arg>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>//body/div[2]/div[1]/div[1]/div[1]/button[${count}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220114 12:45:44.298" level="INFO">Element '//body/div[2]/div[1]/div[1]/div[1]/button[1]' is displayed.</msg>
+<status status="PASS" starttime="20220114 12:45:44.266" endtime="20220114 12:45:44.298"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:44.265" endtime="20220114 12:45:44.299"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:44.153" endtime="20220114 12:45:44.299"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 12:45:44.300" endtime="20220114 12:45:46.617"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:41.966" endtime="20220114 12:45:46.617"/>
+</test>
+<test id="s1-s1-t2" name="Add Multiple Buttons">
+<kw name="Go To Practice Page" library="interact_resource" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${interactpage}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 12:45:46.622" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/add_remove_elements/'.</msg>
+<status status="PASS" starttime="20220114 12:45:46.621" endtime="20220114 12:45:48.794"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:46.620" endtime="20220114 12:45:48.794"/>
+</kw>
+<kw name="Add Delete Button">
+<arg>5</arg>
+<kw name="Repeat Keyword" library="BuiltIn">
+<arg>${count}</arg>
+<arg>Click Add Element Button</arg>
+<doc>Executes the specified keyword multiple times.</doc>
+<msg timestamp="20220114 12:45:48.796" level="INFO">Repeating keyword, round 1/5.</msg>
+<kw name="Click Add Element Button" library="interact_resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[contains(text(),'Add Element')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 12:45:48.798" level="INFO">Clicking button '//button[contains(text(),'Add Element')]'.</msg>
+<status status="PASS" starttime="20220114 12:45:48.797" endtime="20220114 12:45:48.903"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:48.796" endtime="20220114 12:45:48.903"/>
+</kw>
+<msg timestamp="20220114 12:45:48.903" level="INFO">Repeating keyword, round 2/5.</msg>
+<kw name="Click Add Element Button" library="interact_resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[contains(text(),'Add Element')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 12:45:48.904" level="INFO">Clicking button '//button[contains(text(),'Add Element')]'.</msg>
+<status status="PASS" starttime="20220114 12:45:48.904" endtime="20220114 12:45:48.953"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:48.904" endtime="20220114 12:45:48.953"/>
+</kw>
+<msg timestamp="20220114 12:45:48.953" level="INFO">Repeating keyword, round 3/5.</msg>
+<kw name="Click Add Element Button" library="interact_resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[contains(text(),'Add Element')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 12:45:48.954" level="INFO">Clicking button '//button[contains(text(),'Add Element')]'.</msg>
+<status status="PASS" starttime="20220114 12:45:48.954" endtime="20220114 12:45:49.000"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:48.953" endtime="20220114 12:45:49.001"/>
+</kw>
+<msg timestamp="20220114 12:45:49.001" level="INFO">Repeating keyword, round 4/5.</msg>
+<kw name="Click Add Element Button" library="interact_resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[contains(text(),'Add Element')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 12:45:49.002" level="INFO">Clicking button '//button[contains(text(),'Add Element')]'.</msg>
+<status status="PASS" starttime="20220114 12:45:49.001" endtime="20220114 12:45:49.054"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:49.001" endtime="20220114 12:45:49.054"/>
+</kw>
+<msg timestamp="20220114 12:45:49.054" level="INFO">Repeating keyword, round 5/5.</msg>
+<kw name="Click Add Element Button" library="interact_resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[contains(text(),'Add Element')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 12:45:49.057" level="INFO">Clicking button '//button[contains(text(),'Add Element')]'.</msg>
+<status status="PASS" starttime="20220114 12:45:49.056" endtime="20220114 12:45:49.109"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:49.055" endtime="20220114 12:45:49.109"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:48.796" endtime="20220114 12:45:49.110"/>
+</kw>
+<kw name="Multiple Delete Buttons Should Be Visible" library="interact_resource">
+<arg>${count}</arg>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>//body/div[2]/div[1]/div[1]/div[1]/button[${count}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220114 12:45:49.138" level="INFO">Element '//body/div[2]/div[1]/div[1]/div[1]/button[5]' is displayed.</msg>
+<status status="PASS" starttime="20220114 12:45:49.111" endtime="20220114 12:45:49.138"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:49.110" endtime="20220114 12:45:49.138"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:48.795" endtime="20220114 12:45:49.139"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 12:45:49.141" endtime="20220114 12:45:51.446"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:46.619" endtime="20220114 12:45:51.446"/>
+</test>
+<doc>A test suite for button interactions</doc>
+<status status="PASS" starttime="20220114 12:45:41.593" endtime="20220114 12:45:51.455"/>
+</suite>
+<suite id="s1-s2" name="Dynamiccontrol Test" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\interactions_testsuite\dynamiccontrol_test.robot">
+<kw name="Go To Dynamic Page" library="interact_resource" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${dynamicpage}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 12:45:51.496" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/dynamic_controls'.</msg>
+<status status="PASS" starttime="20220114 12:45:51.495" endtime="20220114 12:45:53.631"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:51.494" endtime="20220114 12:45:53.632"/>
+</kw>
+<test id="s1-s2-t1" name="Remove Unchecked Checkbox">
+<kw name="Checkbox Should Be Unchecked" library="interact_resource">
+<kw name="Checkbox Should Not Be Selected" library="Selenium2Library">
+<arg>//body/div[2]/div[1]/div[1]/form[1]/div[1]/input[1]</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<msg timestamp="20220114 12:45:53.635" level="INFO">Verifying checkbox '//body/div[2]/div[1]/div[1]/form[1]/div[1]/input[1]' is not selected.</msg>
+<status status="PASS" starttime="20220114 12:45:53.634" endtime="20220114 12:45:53.685"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:53.633" endtime="20220114 12:45:53.685"/>
+</kw>
+<kw name="Click Remove Button" library="interact_resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[contains(text(),'Remove')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 12:45:53.693" level="INFO">Clicking button '//button[contains(text(),'Remove')]'.</msg>
+<status status="PASS" starttime="20220114 12:45:53.692" endtime="20220114 12:45:53.788"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//button[contains(text(),'Add')]</arg>
+<arg>timeout=15 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220114 12:45:53.788" endtime="20220114 12:45:56.870"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:53.685" endtime="20220114 12:45:56.870"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>It's gone!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220114 12:45:56.892" level="INFO">Current page contains text 'It's gone!'.</msg>
+<status status="PASS" starttime="20220114 12:45:56.871" endtime="20220114 12:45:56.892"/>
+</kw>
+<kw name="Checkbox Should Not Be Visible" library="interact_resource">
+<kw name="Element Should Not Be Visible" library="Selenium2Library">
+<arg>//input[@id='checkbox']</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20220114 12:45:56.910" level="INFO">Element '//input[@id='checkbox']' did not exist.</msg>
+<status status="PASS" starttime="20220114 12:45:56.894" endtime="20220114 12:45:56.910"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:56.893" endtime="20220114 12:45:56.911"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:53.632" endtime="20220114 12:45:56.912"/>
+</test>
+<test id="s1-s2-t2" name="Add Check And Remove">
+<kw name="Click Add Button" library="interact_resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[contains(text(),'Add')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 12:45:56.918" level="INFO">Clicking button '//button[contains(text(),'Add')]'.</msg>
+<status status="PASS" starttime="20220114 12:45:56.917" endtime="20220114 12:45:56.994"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//button[contains(text(),'Remove')]</arg>
+<arg>timeout=15 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220114 12:45:56.994" endtime="20220114 12:46:00.154"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:56.916" endtime="20220114 12:46:00.155"/>
+</kw>
+<kw name="Checkbox Should Be Visible" library="interact_resource">
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>//input[@id='checkbox']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220114 12:46:00.182" level="INFO">Element '//input[@id='checkbox']' is displayed.</msg>
+<status status="PASS" starttime="20220114 12:46:00.156" endtime="20220114 12:46:00.182"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:00.155" endtime="20220114 12:46:00.182"/>
+</kw>
+<kw name="Check The Checkbox" library="interact_resource">
+<kw name="Select Checkbox" library="Selenium2Library">
+<arg>//input[@id='checkbox']</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20220114 12:46:00.185" level="INFO">Selecting checkbox '//input[@id='checkbox']'.</msg>
+<status status="PASS" starttime="20220114 12:46:00.184" endtime="20220114 12:46:00.274"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:00.183" endtime="20220114 12:46:00.274"/>
+</kw>
+<kw name="Click Remove Button" library="interact_resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[contains(text(),'Remove')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 12:46:00.276" level="INFO">Clicking button '//button[contains(text(),'Remove')]'.</msg>
+<status status="PASS" starttime="20220114 12:46:00.275" endtime="20220114 12:46:00.335"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//button[contains(text(),'Add')]</arg>
+<arg>timeout=15 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220114 12:46:00.335" endtime="20220114 12:46:03.430"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:00.275" endtime="20220114 12:46:03.430"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>It's gone!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220114 12:46:03.448" level="INFO">Current page contains text 'It's gone!'.</msg>
+<status status="PASS" starttime="20220114 12:46:03.431" endtime="20220114 12:46:03.448"/>
+</kw>
+<kw name="Checkbox Should Not Be Visible" library="interact_resource">
+<kw name="Element Should Not Be Visible" library="Selenium2Library">
+<arg>//input[@id='checkbox']</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20220114 12:46:03.463" level="INFO">Element '//input[@id='checkbox']' did not exist.</msg>
+<status status="PASS" starttime="20220114 12:46:03.449" endtime="20220114 12:46:03.463"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:03.448" endtime="20220114 12:46:03.463"/>
+</kw>
+<status status="PASS" starttime="20220114 12:45:56.914" endtime="20220114 12:46:03.464"/>
+</test>
+<test id="s1-s2-t3" name="Add Uncheck And Remove">
+<kw name="Click Add Button" library="interact_resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[contains(text(),'Add')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 12:46:03.468" level="INFO">Clicking button '//button[contains(text(),'Add')]'.</msg>
+<status status="PASS" starttime="20220114 12:46:03.468" endtime="20220114 12:46:03.539"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//button[contains(text(),'Remove')]</arg>
+<arg>timeout=15 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220114 12:46:03.539" endtime="20220114 12:46:06.735"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:03.467" endtime="20220114 12:46:06.736"/>
+</kw>
+<kw name="Checkbox Should Be Visible" library="interact_resource">
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>//input[@id='checkbox']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220114 12:46:06.779" level="INFO">Element '//input[@id='checkbox']' is displayed.</msg>
+<status status="PASS" starttime="20220114 12:46:06.738" endtime="20220114 12:46:06.779"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:06.736" endtime="20220114 12:46:06.780"/>
+</kw>
+<kw name="Uncheck The Checkbox" library="interact_resource">
+<kw name="Unselect Checkbox" library="Selenium2Library">
+<arg>//input[@id='checkbox']</arg>
+<doc>Removes the selection of checkbox identified by ``locator``.</doc>
+<msg timestamp="20220114 12:46:06.781" level="INFO">Unselecting checkbox '//input[@id='checkbox']'.</msg>
+<status status="PASS" starttime="20220114 12:46:06.781" endtime="20220114 12:46:06.824"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:06.780" endtime="20220114 12:46:06.824"/>
+</kw>
+<kw name="Click Remove Button" library="interact_resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[contains(text(),'Remove')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 12:46:06.826" level="INFO">Clicking button '//button[contains(text(),'Remove')]'.</msg>
+<status status="PASS" starttime="20220114 12:46:06.826" endtime="20220114 12:46:06.888"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//button[contains(text(),'Add')]</arg>
+<arg>timeout=15 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220114 12:46:06.888" endtime="20220114 12:46:10.096"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:06.825" endtime="20220114 12:46:10.097"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>It's gone!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220114 12:46:10.122" level="INFO">Current page contains text 'It's gone!'.</msg>
+<status status="PASS" starttime="20220114 12:46:10.099" endtime="20220114 12:46:10.122"/>
+</kw>
+<kw name="Checkbox Should Not Be Visible" library="interact_resource">
+<kw name="Element Should Not Be Visible" library="Selenium2Library">
+<arg>//input[@id='checkbox']</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20220114 12:46:10.137" level="INFO">Element '//input[@id='checkbox']' did not exist.</msg>
+<status status="PASS" starttime="20220114 12:46:10.124" endtime="20220114 12:46:10.137"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:10.123" endtime="20220114 12:46:10.138"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:03.466" endtime="20220114 12:46:10.138"/>
+</test>
+<test id="s1-s2-t4" name="Enable Text Field">
+<kw name="Click Enable Button" library="interact_resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[contains(text(),'Enable')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 12:46:10.142" level="INFO">Clicking button '//button[contains(text(),'Enable')]'.</msg>
+<status status="PASS" starttime="20220114 12:46:10.142" endtime="20220114 12:46:10.216"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//button[contains(text(),'Disable')]</arg>
+<arg>timeout=15 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220114 12:46:10.216" endtime="20220114 12:46:13.429"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:10.141" endtime="20220114 12:46:13.429"/>
+</kw>
+<kw name="Textfield Should Be enabled" library="interact_resource">
+<kw name="Element Should Be Enabled" library="Selenium2Library">
+<arg>//body/div[2]/div[1]/div[1]/form[2]/input[1]</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220114 12:46:13.439" endtime="20220114 12:46:13.506"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:13.429" endtime="20220114 12:46:13.506"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:10.140" endtime="20220114 12:46:13.507"/>
+</test>
+<test id="s1-s2-t5" name="Disable Text Field">
+<kw name="Click Disable Button" library="interact_resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[contains(text(),'Disable')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 12:46:13.511" level="INFO">Clicking button '//button[contains(text(),'Disable')]'.</msg>
+<status status="PASS" starttime="20220114 12:46:13.510" endtime="20220114 12:46:13.572"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//button[contains(text(), 'Enable')]</arg>
+<arg>timeout=15 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220114 12:46:13.572" endtime="20220114 12:46:16.768"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:13.510" endtime="20220114 12:46:16.768"/>
+</kw>
+<kw name="Textfield should Be Disabled" library="interact_resource">
+<kw name="Element Should Be Disabled" library="Selenium2Library">
+<arg>//body/div[2]/div[1]/div[1]/form[2]/input[1]</arg>
+<doc>Verifies that element identified by ``locator`` is disabled.</doc>
+<status status="PASS" starttime="20220114 12:46:16.770" endtime="20220114 12:46:16.797"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:16.769" endtime="20220114 12:46:16.797"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:13.509" endtime="20220114 12:46:16.798"/>
+</test>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 12:46:16.802" endtime="20220114 12:46:19.104"/>
+</kw>
+<doc>A test suite for button interactions</doc>
+<status status="PASS" starttime="20220114 12:45:51.470" endtime="20220114 12:46:19.104"/>
+</suite>
+<suite id="s1-s3" name="Removebutton Test" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\interactions_testsuite\removebutton_test.robot">
+<test id="s1-s3-t1" name="Remove Last Delete Button">
+<kw name="Go To Practice Page" library="interact_resource" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${interactpage}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 12:46:19.104" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/add_remove_elements/'.</msg>
+<status status="PASS" starttime="20220114 12:46:19.104" endtime="20220114 12:46:21.051"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:19.104" endtime="20220114 12:46:21.052"/>
+</kw>
+<kw name="Click Add Element Button" library="interact_resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[contains(text(),'Add Element')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 12:46:21.054" level="INFO">Clicking button '//button[contains(text(),'Add Element')]'.</msg>
+<status status="PASS" starttime="20220114 12:46:21.053" endtime="20220114 12:46:21.145"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:21.053" endtime="20220114 12:46:21.146"/>
+</kw>
+<kw name="Click Delete Button" library="interact_resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[contains(text(),'Delete')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 12:46:21.147" level="INFO">Clicking button '//button[contains(text(),'Delete')]'.</msg>
+<status status="PASS" starttime="20220114 12:46:21.147" endtime="20220114 12:46:21.219"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:21.146" endtime="20220114 12:46:21.219"/>
+</kw>
+<kw name="Delete Button Should Not Be Visible" library="interact_resource">
+<kw name="Element Should Not Be Visible" library="Selenium2Library">
+<arg>//button[contains(text(),'Delete')]</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20220114 12:46:21.230" level="INFO">Element '//button[contains(text(),'Delete')]' did not exist.</msg>
+<status status="PASS" starttime="20220114 12:46:21.221" endtime="20220114 12:46:21.230"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:21.220" endtime="20220114 12:46:21.230"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 12:46:21.231" endtime="20220114 12:46:23.532"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:19.104" endtime="20220114 12:46:23.532"/>
+</test>
+<test id="s1-s3-t2" name="Remove One Delete Button">
+<kw name="Go To Practice Page" library="interact_resource" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${interactpage}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 12:46:23.536" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/add_remove_elements/'.</msg>
+<status status="PASS" starttime="20220114 12:46:23.536" endtime="20220114 12:46:25.432"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:23.535" endtime="20220114 12:46:25.432"/>
+</kw>
+<kw name="Add Delete Button" library="interact_resource">
+<arg>5</arg>
+<kw name="Repeat Keyword" library="BuiltIn">
+<arg>${count}</arg>
+<arg>Click Add Element Button</arg>
+<doc>Executes the specified keyword multiple times.</doc>
+<msg timestamp="20220114 12:46:25.433" level="INFO">Repeating keyword, round 1/5.</msg>
+<kw name="Click Add Element Button" library="interact_resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[contains(text(),'Add Element')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 12:46:25.434" level="INFO">Clicking button '//button[contains(text(),'Add Element')]'.</msg>
+<status status="PASS" starttime="20220114 12:46:25.434" endtime="20220114 12:46:25.527"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:25.434" endtime="20220114 12:46:25.527"/>
+</kw>
+<msg timestamp="20220114 12:46:25.527" level="INFO">Repeating keyword, round 2/5.</msg>
+<kw name="Click Add Element Button" library="interact_resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[contains(text(),'Add Element')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 12:46:25.528" level="INFO">Clicking button '//button[contains(text(),'Add Element')]'.</msg>
+<status status="PASS" starttime="20220114 12:46:25.528" endtime="20220114 12:46:25.577"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:25.527" endtime="20220114 12:46:25.577"/>
+</kw>
+<msg timestamp="20220114 12:46:25.577" level="INFO">Repeating keyword, round 3/5.</msg>
+<kw name="Click Add Element Button" library="interact_resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[contains(text(),'Add Element')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 12:46:25.578" level="INFO">Clicking button '//button[contains(text(),'Add Element')]'.</msg>
+<status status="PASS" starttime="20220114 12:46:25.578" endtime="20220114 12:46:25.621"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:25.577" endtime="20220114 12:46:25.621"/>
+</kw>
+<msg timestamp="20220114 12:46:25.622" level="INFO">Repeating keyword, round 4/5.</msg>
+<kw name="Click Add Element Button" library="interact_resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[contains(text(),'Add Element')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 12:46:25.623" level="INFO">Clicking button '//button[contains(text(),'Add Element')]'.</msg>
+<status status="PASS" starttime="20220114 12:46:25.622" endtime="20220114 12:46:25.667"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:25.622" endtime="20220114 12:46:25.667"/>
+</kw>
+<msg timestamp="20220114 12:46:25.667" level="INFO">Repeating keyword, round 5/5.</msg>
+<kw name="Click Add Element Button" library="interact_resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[contains(text(),'Add Element')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 12:46:25.669" level="INFO">Clicking button '//button[contains(text(),'Add Element')]'.</msg>
+<status status="PASS" starttime="20220114 12:46:25.668" endtime="20220114 12:46:25.714"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:25.668" endtime="20220114 12:46:25.715"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:25.433" endtime="20220114 12:46:25.715"/>
+</kw>
+<kw name="Multiple Delete Buttons Should Be Visible" library="interact_resource">
+<arg>${count}</arg>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>//body/div[2]/div[1]/div[1]/div[1]/button[${count}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220114 12:46:25.745" level="INFO">Element '//body/div[2]/div[1]/div[1]/div[1]/button[5]' is displayed.</msg>
+<status status="PASS" starttime="20220114 12:46:25.715" endtime="20220114 12:46:25.745"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:25.715" endtime="20220114 12:46:25.746"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:25.432" endtime="20220114 12:46:25.746"/>
+</kw>
+<kw name="Click Delete Button" library="interact_resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[contains(text(),'Delete')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 12:46:25.747" level="INFO">Clicking button '//button[contains(text(),'Delete')]'.</msg>
+<status status="PASS" starttime="20220114 12:46:25.747" endtime="20220114 12:46:25.843"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:25.746" endtime="20220114 12:46:25.843"/>
+</kw>
+<kw name="Multiple Delete Buttons Should Be Visible" library="interact_resource">
+<arg>4</arg>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>//body/div[2]/div[1]/div[1]/div[1]/button[${count}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220114 12:46:25.874" level="INFO">Element '//body/div[2]/div[1]/div[1]/div[1]/button[4]' is displayed.</msg>
+<status status="PASS" starttime="20220114 12:46:25.844" endtime="20220114 12:46:25.875"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:25.844" endtime="20220114 12:46:25.875"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 12:46:25.876" endtime="20220114 12:46:28.146"/>
+</kw>
+<status status="PASS" starttime="20220114 12:46:23.534" endtime="20220114 12:46:28.146"/>
+</test>
+<doc>A test suite for button interactions</doc>
+<status status="PASS" starttime="20220114 12:46:19.104" endtime="20220114 12:46:28.155"/>
+</suite>
+<status status="PASS" starttime="20220114 12:45:41.561" endtime="20220114 12:46:28.176"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="9" fail="0" skip="0" id="s1" name="Interactions Testsuite">Interactions Testsuite</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Addbutton Test">Interactions Testsuite.Addbutton Test</stat>
+<stat pass="5" fail="0" skip="0" id="s1-s2" name="Dynamiccontrol Test">Interactions Testsuite.Dynamiccontrol Test</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s3" name="Removebutton Test">Interactions Testsuite.Removebutton Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
