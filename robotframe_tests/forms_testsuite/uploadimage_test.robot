@@ -2,7 +2,8 @@
 Documentation    A test suite for submitting a student form
 Library          Selenium2Library
 Resource         forms_resource.robot
-Test Setup      Go To Website
+Test Setup      Run Keywords      Go To Website 
+...              AND    Go To Practice Page
 Test Teardown   Close Browser
 
 *** Test Cases ***

@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.8.0 on win32)" generated="20220114 00:57:50.275" rpa="false" schemaversion="2">
+<suite id="s1" name="Windows Testsuite" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\windows_testsuite">
+<suite id="s1-s1" name="Browser Test" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\windows_testsuite\browser_test.robot">
+<test id="s1-s1-t1" name="New Tab">
+<kw name="Go To Website" library="general" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 00:57:50.646" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 00:57:50.646" endtime="20220114 00:57:55.123"/>
+</kw>
+<status status="PASS" starttime="20220114 00:57:50.645" endtime="20220114 00:57:55.124"/>
+</kw>
+<kw name="Open New Page">
+<arg>tab</arg>
+<kw name="Go To Browser Page" library="win_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${browserpage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 00:57:55.127" level="INFO">Opening url 'https://demoqa.com/browser-windows'</msg>
+<status status="PASS" starttime="20220114 00:57:55.126" endtime="20220114 00:57:55.883"/>
+</kw>
+<status status="PASS" starttime="20220114 00:57:55.125" endtime="20220114 00:57:55.883"/>
+</kw>
+<kw name="Click ${button} Button" library="win_resource" sourcename="Click ${button} Button">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[@id='${button}Button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 00:57:55.886" level="INFO">Clicking button '//button[@id='tabButton']'.</msg>
+<status status="PASS" starttime="20220114 00:57:55.885" endtime="20220114 00:57:56.127"/>
+</kw>
+<status status="PASS" starttime="20220114 00:57:55.884" endtime="20220114 00:57:56.128"/>
+</kw>
+<kw name="New ${button} Should Be Visible" library="win_resource" sourcename="New ${button} Should Be Visible">
+<kw name="Switch Window" library="Selenium2Library">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220114 00:57:56.129" endtime="20220114 00:57:56.143"/>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>//h1[@id='sampleHeading']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220114 00:57:56.268" level="INFO">Current page contains element '//h1[@id='sampleHeading']'.</msg>
+<status status="PASS" starttime="20220114 00:57:56.143" endtime="20220114 00:57:56.268"/>
+</kw>
+<status status="PASS" starttime="20220114 00:57:56.128" endtime="20220114 00:57:56.269"/>
+</kw>
+<status status="PASS" starttime="20220114 00:57:55.124" endtime="20220114 00:57:56.269"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 00:57:56.271" endtime="20220114 00:57:58.750"/>
+</kw>
+<status status="PASS" starttime="20220114 00:57:50.630" endtime="20220114 00:57:58.750"/>
+</test>
+<test id="s1-s1-t2" name="New Window">
+<kw name="Go To Website" library="general" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 00:57:58.768" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 00:57:58.765" endtime="20220114 00:58:02.837"/>
+</kw>
+<status status="PASS" starttime="20220114 00:57:58.761" endtime="20220114 00:58:02.837"/>
+</kw>
+<kw name="Open New Page">
+<arg>window</arg>
+<kw name="Go To Browser Page" library="win_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${browserpage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 00:58:02.840" level="INFO">Opening url 'https://demoqa.com/browser-windows'</msg>
+<status status="PASS" starttime="20220114 00:58:02.840" endtime="20220114 00:58:04.072"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:02.839" endtime="20220114 00:58:04.073"/>
+</kw>
+<kw name="Click ${button} Button" library="win_resource" sourcename="Click ${button} Button">
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[@id='${button}Button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 00:58:04.075" level="INFO">Clicking button '//button[@id='windowButton']'.</msg>
+<status status="PASS" starttime="20220114 00:58:04.074" endtime="20220114 00:58:04.457"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:04.073" endtime="20220114 00:58:04.457"/>
+</kw>
+<kw name="New ${button} Should Be Visible" library="win_resource" sourcename="New ${button} Should Be Visible">
+<kw name="Switch Window" library="Selenium2Library">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220114 00:58:04.459" endtime="20220114 00:58:04.591"/>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>//h1[@id='sampleHeading']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220114 00:58:04.624" level="INFO">Current page contains element '//h1[@id='sampleHeading']'.</msg>
+<status status="PASS" starttime="20220114 00:58:04.592" endtime="20220114 00:58:04.624"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:04.458" endtime="20220114 00:58:04.624"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:02.838" endtime="20220114 00:58:04.625"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 00:58:04.627" endtime="20220114 00:58:07.093"/>
+</kw>
+<status status="PASS" starttime="20220114 00:57:58.758" endtime="20220114 00:58:07.093"/>
+</test>
+<doc>A test suite for browsers and tabs</doc>
+<status status="PASS" starttime="20220114 00:57:50.322" endtime="20220114 00:58:07.103"/>
+</suite>
+<suite id="s1-s2" name="Closemodal Test" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\windows_testsuite\closemodal_test.robot">
+<test id="s1-s2-t1" name="Close Small Modal With Close Button">
+<kw name="Go To Website" library="general" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 00:58:07.150" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 00:58:07.150" endtime="20220114 00:58:11.435"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:07.149" endtime="20220114 00:58:11.435"/>
+</kw>
+<kw name="Go To Modal Page" library="win_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${modalpage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 00:58:11.437" level="INFO">Opening url 'https://demoqa.com/modal-dialogs'</msg>
+<status status="PASS" starttime="20220114 00:58:11.437" endtime="20220114 00:58:12.173"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:11.436" endtime="20220114 00:58:12.174"/>
+</kw>
+<kw name="Click Modal Button" library="win_resource">
+<arg>Small</arg>
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[@id='show${size}Modal']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 00:58:12.179" level="INFO">Clicking button '//button[@id='showSmallModal']'.</msg>
+<status status="PASS" starttime="20220114 00:58:12.178" endtime="20220114 00:58:12.605"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:12.177" endtime="20220114 00:58:12.606"/>
+</kw>
+<kw name="Click Close Button" library="win_resource">
+<arg>Small</arg>
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[@id='close${size}Modal']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 00:58:12.617" level="INFO">Clicking button '//button[@id='closeSmallModal']'.</msg>
+<status status="PASS" starttime="20220114 00:58:12.616" endtime="20220114 00:58:12.783"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:12.615" endtime="20220114 00:58:12.783"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 00:58:12.784" endtime="20220114 00:58:15.219"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:07.147" endtime="20220114 00:58:15.219"/>
+</test>
+<test id="s1-s2-t2" name="Close Large Modal With Close Button">
+<kw name="Go To Website" library="general" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 00:58:15.241" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 00:58:15.238" endtime="20220114 00:58:19.248"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:15.235" endtime="20220114 00:58:19.248"/>
+</kw>
+<kw name="Go To Modal Page" library="win_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${modalpage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 00:58:19.250" level="INFO">Opening url 'https://demoqa.com/modal-dialogs'</msg>
+<status status="PASS" starttime="20220114 00:58:19.250" endtime="20220114 00:58:20.044"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:19.249" endtime="20220114 00:58:20.045"/>
+</kw>
+<kw name="Click Modal Button" library="win_resource">
+<arg>Large</arg>
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[@id='show${size}Modal']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 00:58:20.048" level="INFO">Clicking button '//button[@id='showLargeModal']'.</msg>
+<status status="PASS" starttime="20220114 00:58:20.047" endtime="20220114 00:58:20.263"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:20.046" endtime="20220114 00:58:20.264"/>
+</kw>
+<kw name="Click Close Button" library="win_resource">
+<arg>Large</arg>
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[@id='close${size}Modal']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 00:58:20.276" level="INFO">Clicking button '//button[@id='closeLargeModal']'.</msg>
+<status status="PASS" starttime="20220114 00:58:20.275" endtime="20220114 00:58:20.404"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:20.274" endtime="20220114 00:58:20.404"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 00:58:20.405" endtime="20220114 00:58:22.865"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:15.228" endtime="20220114 00:58:22.867"/>
+</test>
+<test id="s1-s2-t3" name="Close Small Modal With X">
+<kw name="Go To Website" library="general" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 00:58:22.882" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 00:58:22.879" endtime="20220114 00:58:26.771"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:22.876" endtime="20220114 00:58:26.771"/>
+</kw>
+<kw name="Go To Modal Page" library="win_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${modalpage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 00:58:26.774" level="INFO">Opening url 'https://demoqa.com/modal-dialogs'</msg>
+<status status="PASS" starttime="20220114 00:58:26.774" endtime="20220114 00:58:27.447"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:26.772" endtime="20220114 00:58:27.448"/>
+</kw>
+<kw name="Click Modal Button" library="win_resource">
+<arg>Small</arg>
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[@id='show${size}Modal']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 00:58:27.449" level="INFO">Clicking button '//button[@id='showSmallModal']'.</msg>
+<status status="PASS" starttime="20220114 00:58:27.449" endtime="20220114 00:58:27.673"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:27.448" endtime="20220114 00:58:27.674"/>
+</kw>
+<kw name="Click X Button" library="win_resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//span[contains(text(),'×')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220114 00:58:27.678" level="INFO">Clicking element '//span[contains(text(),'×')]'.</msg>
+<status status="PASS" starttime="20220114 00:58:27.677" endtime="20220114 00:58:27.965"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:27.676" endtime="20220114 00:58:27.965"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 00:58:27.966" endtime="20220114 00:58:30.410"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:22.873" endtime="20220114 00:58:30.410"/>
+</test>
+<test id="s1-s2-t4" name="Close Large Modal With X">
+<kw name="Go To Website" library="general" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 00:58:30.419" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 00:58:30.418" endtime="20220114 00:58:34.266"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:30.417" endtime="20220114 00:58:34.267"/>
+</kw>
+<kw name="Go To Modal Page" library="win_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${modalpage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 00:58:34.268" level="INFO">Opening url 'https://demoqa.com/modal-dialogs'</msg>
+<status status="PASS" starttime="20220114 00:58:34.268" endtime="20220114 00:58:35.007"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:34.267" endtime="20220114 00:58:35.007"/>
+</kw>
+<kw name="Click Modal Button" library="win_resource">
+<arg>Large</arg>
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[@id='show${size}Modal']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 00:58:35.010" level="INFO">Clicking button '//button[@id='showLargeModal']'.</msg>
+<status status="PASS" starttime="20220114 00:58:35.009" endtime="20220114 00:58:35.296"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:35.008" endtime="20220114 00:58:35.296"/>
+</kw>
+<kw name="Click X Button" library="win_resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//span[contains(text(),'×')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220114 00:58:35.301" level="INFO">Clicking element '//span[contains(text(),'×')]'.</msg>
+<status status="PASS" starttime="20220114 00:58:35.299" endtime="20220114 00:58:35.460"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:35.298" endtime="20220114 00:58:35.461"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 00:58:35.462" endtime="20220114 00:58:37.929"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:30.416" endtime="20220114 00:58:37.929"/>
+</test>
+<doc>A test suite for closing modals</doc>
+<status status="PASS" starttime="20220114 00:58:07.118" endtime="20220114 00:58:37.940"/>
+</suite>
+<suite id="s1-s3" name="Modal Test" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\windows_testsuite\modal_test.robot">
+<test id="s1-s3-t1" name="Small Modal">
+<kw name="Go To Website" library="general" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 00:58:37.989" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 00:58:37.989" endtime="20220114 00:58:41.952"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:37.988" endtime="20220114 00:58:41.953"/>
+</kw>
+<kw name="Open Modal Sizes">
+<arg>Small</arg>
+<arg>sm</arg>
+<kw name="Go To Modal Page" library="win_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${modalpage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 00:58:41.955" level="INFO">Opening url 'https://demoqa.com/modal-dialogs'</msg>
+<status status="PASS" starttime="20220114 00:58:41.954" endtime="20220114 00:58:42.638"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:41.954" endtime="20220114 00:58:42.638"/>
+</kw>
+<kw name="Click Modal Button" library="win_resource">
+<arg>${size}</arg>
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[@id='show${size}Modal']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 00:58:42.640" level="INFO">Clicking button '//button[@id='showSmallModal']'.</msg>
+<status status="PASS" starttime="20220114 00:58:42.639" endtime="20220114 00:58:42.942"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:42.639" endtime="20220114 00:58:42.942"/>
+</kw>
+<kw name="Modal Should Be Visible" library="win_resource">
+<arg>${modalsize}</arg>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>//div[@id='example-modal-sizes-title-${modalsize}']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220114 00:58:43.027" level="INFO">Element '//div[@id='example-modal-sizes-title-sm']' is displayed.</msg>
+<status status="PASS" starttime="20220114 00:58:42.944" endtime="20220114 00:58:43.027"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:42.943" endtime="20220114 00:58:43.028"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:41.954" endtime="20220114 00:58:43.028"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 00:58:43.030" endtime="20220114 00:58:45.463"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:37.986" endtime="20220114 00:58:45.463"/>
+</test>
+<test id="s1-s3-t2" name="Large Modal">
+<kw name="Go To Website" library="general" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 00:58:45.483" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 00:58:45.480" endtime="20220114 00:58:49.356"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:45.476" endtime="20220114 00:58:49.357"/>
+</kw>
+<kw name="Open Modal Sizes">
+<arg>Large</arg>
+<arg>lg</arg>
+<kw name="Go To Modal Page" library="win_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${modalpage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 00:58:49.360" level="INFO">Opening url 'https://demoqa.com/modal-dialogs'</msg>
+<status status="PASS" starttime="20220114 00:58:49.360" endtime="20220114 00:58:50.114"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:49.359" endtime="20220114 00:58:50.114"/>
+</kw>
+<kw name="Click Modal Button" library="win_resource">
+<arg>${size}</arg>
+<kw name="Click Button" library="Selenium2Library">
+<arg>//button[@id='show${size}Modal']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220114 00:58:50.116" level="INFO">Clicking button '//button[@id='showLargeModal']'.</msg>
+<status status="PASS" starttime="20220114 00:58:50.115" endtime="20220114 00:58:50.439"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:50.115" endtime="20220114 00:58:50.440"/>
+</kw>
+<kw name="Modal Should Be Visible" library="win_resource">
+<arg>${modalsize}</arg>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>//div[@id='example-modal-sizes-title-${modalsize}']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220114 00:58:50.523" level="INFO">Element '//div[@id='example-modal-sizes-title-lg']' is displayed.</msg>
+<status status="PASS" starttime="20220114 00:58:50.441" endtime="20220114 00:58:50.523"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:50.440" endtime="20220114 00:58:50.523"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:49.358" endtime="20220114 00:58:50.524"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 00:58:50.525" endtime="20220114 00:58:53.045"/>
+</kw>
+<status status="PASS" starttime="20220114 00:58:45.471" endtime="20220114 00:58:53.045"/>
+</test>
+<doc>A test suite for opening modals</doc>
+<status status="PASS" starttime="20220114 00:58:37.962" endtime="20220114 00:58:53.055"/>
+</suite>
+<status status="PASS" starttime="20220114 00:57:50.275" endtime="20220114 00:58:53.069"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="Windows Testsuite">Windows Testsuite</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Browser Test">Windows Testsuite.Browser Test</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s2" name="Closemodal Test">Windows Testsuite.Closemodal Test</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s3" name="Modal Test">Windows Testsuite.Modal Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

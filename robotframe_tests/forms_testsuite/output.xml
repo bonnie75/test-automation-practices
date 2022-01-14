@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.8.0 on win32)" generated="20220110 23:52:17.157" rpa="false" schemaversion="2">
-<suite id="s1" name="Forms" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\forms">
-<suite id="s1-s1" name="Datepicker Test" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\forms\datepicker_test.robot">
+<robot generator="Robot 4.1.3 (Python 3.8.0 on win32)" generated="20220114 01:02:33.693" rpa="false" schemaversion="2">
+<suite id="s1" name="Forms Testsuite" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\forms_testsuite">
+<suite id="s1-s1" name="Datepicker Test" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\forms_testsuite\datepicker_test.robot">
 <test id="s1-s1-t1" name="Select And Display Date Of Birth">
-<kw name="Go To Website" library="forms_resource" type="SETUP">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Practice Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
 <kw name="Open Browser" library="Selenium2Library">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220110 23:52:17.564" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
-<status status="PASS" starttime="20220110 23:52:17.563" endtime="20220110 23:52:21.059"/>
+<msg timestamp="20220114 01:02:34.084" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:02:34.083" endtime="20220114 01:02:38.535"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:17.562" endtime="20220110 23:52:21.060"/>
+<status status="PASS" starttime="20220114 01:02:34.083" endtime="20220114 01:02:38.536"/>
+</kw>
+<kw name="Go To Practice Page" library="forms_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${practicepage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:02:38.537" level="INFO">Opening url 'https://demoqa.com/automation-practice-form'</msg>
+<status status="PASS" starttime="20220114 01:02:38.537" endtime="20220114 01:02:39.439"/>
+</kw>
+<status status="PASS" starttime="20220114 01:02:38.536" endtime="20220114 01:02:39.440"/>
+</kw>
+<status status="PASS" starttime="20220114 01:02:34.082" endtime="20220114 01:02:39.440"/>
 </kw>
 <kw name="Enter Required Fields" library="forms_resource">
 <kw name="Enter First Name" library="forms_resource">
@@ -19,29 +35,29 @@
 <arg>//input[@id='firstName']</arg>
 <arg>Allie</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:21.065" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
-<status status="PASS" starttime="20220110 23:52:21.063" endtime="20220110 23:52:21.296"/>
+<msg timestamp="20220114 01:02:39.446" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
+<status status="PASS" starttime="20220114 01:02:39.446" endtime="20220114 01:02:39.806"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:21.062" endtime="20220110 23:52:21.296"/>
+<status status="PASS" starttime="20220114 01:02:39.445" endtime="20220114 01:02:39.809"/>
 </kw>
 <kw name="Enter Last Name" library="forms_resource">
 <kw name="Input Text" library="Selenium2Library">
 <arg>//input[@id='lastName']</arg>
 <arg>Test</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:21.298" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
-<status status="PASS" starttime="20220110 23:52:21.297" endtime="20220110 23:52:21.475"/>
+<msg timestamp="20220114 01:02:39.811" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
+<status status="PASS" starttime="20220114 01:02:39.810" endtime="20220114 01:02:39.967"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:21.296" endtime="20220110 23:52:21.475"/>
+<status status="PASS" starttime="20220114 01:02:39.809" endtime="20220114 01:02:39.967"/>
 </kw>
 <kw name="Select Gender Option" library="forms_resource">
 <kw name="Click Element" library="Selenium2Library">
 <arg>//label[contains(text(),'Female')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:21.476" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
-<status status="PASS" starttime="20220110 23:52:21.476" endtime="20220110 23:52:21.558"/>
+<msg timestamp="20220114 01:02:39.969" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
+<status status="PASS" starttime="20220114 01:02:39.968" endtime="20220114 01:02:40.096"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:21.475" endtime="20220110 23:52:21.559"/>
+<status status="PASS" starttime="20220114 01:02:39.967" endtime="20220114 01:02:40.096"/>
 </kw>
 <kw name="Enter Phone Number" library="forms_resource">
 <arg>9991231234</arg>
@@ -49,106 +65,122 @@
 <arg>//input[@id='userNumber']</arg>
 <arg>${phone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:21.560" level="INFO">Typing text '9991231234' into text field '//input[@id='userNumber']'.</msg>
-<status status="PASS" starttime="20220110 23:52:21.559" endtime="20220110 23:52:21.692"/>
+<msg timestamp="20220114 01:02:40.098" level="INFO">Typing text '9991231234' into text field '//input[@id='userNumber']'.</msg>
+<status status="PASS" starttime="20220114 01:02:40.097" endtime="20220114 01:02:40.265"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:21.559" endtime="20220110 23:52:21.692"/>
+<status status="PASS" starttime="20220114 01:02:40.096" endtime="20220114 01:02:40.266"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:21.061" endtime="20220110 23:52:21.692"/>
+<status status="PASS" starttime="20220114 01:02:39.443" endtime="20220114 01:02:40.266"/>
 </kw>
 <kw name="Click Calendar Field" library="forms_resource">
 <kw name="Click Element" library="Selenium2Library">
 <arg>//input[@id='dateOfBirthInput']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:21.694" level="INFO">Clicking element '//input[@id='dateOfBirthInput']'.</msg>
-<status status="PASS" starttime="20220110 23:52:21.694" endtime="20220110 23:52:21.866"/>
+<msg timestamp="20220114 01:02:40.268" level="INFO">Clicking element '//input[@id='dateOfBirthInput']'.</msg>
+<status status="PASS" starttime="20220114 01:02:40.267" endtime="20220114 01:02:40.481"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:21.693" endtime="20220110 23:52:21.866"/>
+<status status="PASS" starttime="20220114 01:02:40.267" endtime="20220114 01:02:40.482"/>
 </kw>
 <kw name="Date Picker Should Be Visible" library="forms_resource">
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[1]/form[1]/div[5]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220110 23:52:21.908" level="INFO">Element '//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[1]/form[1]/div[5]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]' is displayed.</msg>
-<status status="PASS" starttime="20220110 23:52:21.869" endtime="20220110 23:52:21.908"/>
+<msg timestamp="20220114 01:02:40.547" level="INFO">Element '//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[1]/form[1]/div[5]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]' is displayed.</msg>
+<status status="PASS" starttime="20220114 01:02:40.485" endtime="20220114 01:02:40.547"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:21.868" endtime="20220110 23:52:21.909"/>
+<status status="PASS" starttime="20220114 01:02:40.484" endtime="20220114 01:02:40.548"/>
 </kw>
 <kw name="Select Date" library="forms_resource">
 <kw name="Click Element" library="Selenium2Library">
 <arg>//select[@class='react-datepicker__month-select']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:21.910" level="INFO">Clicking element '//select[@class='react-datepicker__month-select']'.</msg>
-<status status="PASS" starttime="20220110 23:52:21.910" endtime="20220110 23:52:22.014"/>
+<msg timestamp="20220114 01:02:40.550" level="INFO">Clicking element '//select[@class='react-datepicker__month-select']'.</msg>
+<status status="PASS" starttime="20220114 01:02:40.549" endtime="20220114 01:02:40.687"/>
 </kw>
 <kw name="Select From List By Value" library="Selenium2Library">
 <arg>//select[@class='react-datepicker__month-select']</arg>
 <arg>4</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<msg timestamp="20220110 23:52:22.016" level="INFO">Selecting options from selection list '//select[@class='react-datepicker__month-select']' by value 4.</msg>
-<status status="PASS" starttime="20220110 23:52:22.014" endtime="20220110 23:52:22.124"/>
+<msg timestamp="20220114 01:02:40.689" level="INFO">Selecting options from selection list '//select[@class='react-datepicker__month-select']' by value 4.</msg>
+<status status="PASS" starttime="20220114 01:02:40.688" endtime="20220114 01:02:40.794"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//select[@class='react-datepicker__year-select']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:22.125" level="INFO">Clicking element '//select[@class='react-datepicker__year-select']'.</msg>
-<status status="PASS" starttime="20220110 23:52:22.125" endtime="20220110 23:52:22.217"/>
+<msg timestamp="20220114 01:02:40.795" level="INFO">Clicking element '//select[@class='react-datepicker__year-select']'.</msg>
+<status status="PASS" starttime="20220114 01:02:40.795" endtime="20220114 01:02:40.913"/>
 </kw>
 <kw name="Select From List By Value" library="Selenium2Library">
 <arg>//select[@class='react-datepicker__year-select']</arg>
 <arg>1957</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<msg timestamp="20220110 23:52:22.219" level="INFO">Selecting options from selection list '//select[@class='react-datepicker__year-select']' by value 1957.</msg>
-<status status="PASS" starttime="20220110 23:52:22.218" endtime="20220110 23:52:22.321"/>
+<msg timestamp="20220114 01:02:40.914" level="INFO">Selecting options from selection list '//select[@class='react-datepicker__year-select']' by value 1957.</msg>
+<status status="PASS" starttime="20220114 01:02:40.913" endtime="20220114 01:02:41.034"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[1]/form[1]/div[5]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div[2]/div[3]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:22.322" level="INFO">Clicking element '//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[1]/form[1]/div[5]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div[2]/div[3]'.</msg>
-<status status="PASS" starttime="20220110 23:52:22.322" endtime="20220110 23:52:22.393"/>
+<msg timestamp="20220114 01:02:41.035" level="INFO">Clicking element '//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[1]/form[1]/div[5]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div[2]/div[3]'.</msg>
+<status status="PASS" starttime="20220114 01:02:41.035" endtime="20220114 01:02:41.120"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:21.909" endtime="20220110 23:52:22.394"/>
+<status status="PASS" starttime="20220114 01:02:40.548" endtime="20220114 01:02:41.120"/>
 </kw>
 <kw name="Click Submit Button" library="forms_resource">
 <kw name="Set Focus To Element" library="Selenium2Library">
 <arg>//button[@id='submit']</arg>
 <doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220110 23:52:22.395" endtime="20220110 23:52:22.416"/>
+<status status="PASS" starttime="20220114 01:02:41.121" endtime="20220114 01:02:41.149"/>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <arg>//button[@id='submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:22.417" level="INFO">Clicking button '//button[@id='submit']'.</msg>
-<status status="PASS" starttime="20220110 23:52:22.416" endtime="20220110 23:52:22.552"/>
+<msg timestamp="20220114 01:02:41.149" level="INFO">Clicking button '//button[@id='submit']'.</msg>
+<status status="PASS" starttime="20220114 01:02:41.149" endtime="20220114 01:02:41.278"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:22.394" endtime="20220110 23:52:22.553"/>
+<status status="PASS" starttime="20220114 01:02:41.121" endtime="20220114 01:02:41.279"/>
 </kw>
 <kw name="Date Should Be Visible on Modal" library="forms_resource">
 <kw name="Element Should Contain" library="Selenium2Library">
 <arg>//body/div[4]/div[1]/div[1]/div[2]/div[1]/table[1]</arg>
 <arg>07 May,1957</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220110 23:52:22.650" level="INFO">Element '//body/div[4]/div[1]/div[1]/div[2]/div[1]/table[1]' contains text '07 May,1957'.</msg>
-<status status="PASS" starttime="20220110 23:52:22.562" endtime="20220110 23:52:22.650"/>
+<msg timestamp="20220114 01:02:41.417" level="INFO">Element '//body/div[4]/div[1]/div[1]/div[2]/div[1]/table[1]' contains text '07 May,1957'.</msg>
+<status status="PASS" starttime="20220114 01:02:41.280" endtime="20220114 01:02:41.417"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:22.562" endtime="20220110 23:52:22.651"/>
+<status status="PASS" starttime="20220114 01:02:41.279" endtime="20220114 01:02:41.418"/>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220110 23:52:22.652" endtime="20220110 23:52:25.167"/>
+<status status="PASS" starttime="20220114 01:02:41.418" endtime="20220114 01:02:43.912"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:17.560" endtime="20220110 23:52:25.168"/>
+<status status="PASS" starttime="20220114 01:02:34.069" endtime="20220114 01:02:43.912"/>
 </test>
 <test id="s1-s1-t2" name="Only Date Is Accepted For Date of Birth">
-<kw name="Go To Website" library="forms_resource" type="SETUP">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Practice Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
 <kw name="Open Browser" library="Selenium2Library">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220110 23:52:25.173" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
-<status status="PASS" starttime="20220110 23:52:25.172" endtime="20220110 23:52:28.888"/>
+<msg timestamp="20220114 01:02:43.934" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:02:43.932" endtime="20220114 01:02:47.448"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:25.171" endtime="20220110 23:52:28.889"/>
+<status status="PASS" starttime="20220114 01:02:43.929" endtime="20220114 01:02:47.449"/>
+</kw>
+<kw name="Go To Practice Page" library="forms_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${practicepage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:02:47.450" level="INFO">Opening url 'https://demoqa.com/automation-practice-form'</msg>
+<status status="PASS" starttime="20220114 01:02:47.450" endtime="20220114 01:02:48.242"/>
+</kw>
+<status status="PASS" starttime="20220114 01:02:47.449" endtime="20220114 01:02:48.242"/>
+</kw>
+<status status="PASS" starttime="20220114 01:02:43.925" endtime="20220114 01:02:48.243"/>
 </kw>
 <kw name="Enter Required Fields" library="forms_resource">
 <kw name="Enter First Name" library="forms_resource">
@@ -156,29 +188,29 @@
 <arg>//input[@id='firstName']</arg>
 <arg>Allie</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:28.894" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
-<status status="PASS" starttime="20220110 23:52:28.893" endtime="20220110 23:52:29.030"/>
+<msg timestamp="20220114 01:02:48.247" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
+<status status="PASS" starttime="20220114 01:02:48.246" endtime="20220114 01:02:48.559"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:28.891" endtime="20220110 23:52:29.031"/>
+<status status="PASS" starttime="20220114 01:02:48.245" endtime="20220114 01:02:48.559"/>
 </kw>
 <kw name="Enter Last Name" library="forms_resource">
 <kw name="Input Text" library="Selenium2Library">
 <arg>//input[@id='lastName']</arg>
 <arg>Test</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:29.032" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
-<status status="PASS" starttime="20220110 23:52:29.032" endtime="20220110 23:52:29.235"/>
+<msg timestamp="20220114 01:02:48.561" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
+<status status="PASS" starttime="20220114 01:02:48.561" endtime="20220114 01:02:48.692"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:29.031" endtime="20220110 23:52:29.236"/>
+<status status="PASS" starttime="20220114 01:02:48.560" endtime="20220114 01:02:48.692"/>
 </kw>
 <kw name="Select Gender Option" library="forms_resource">
 <kw name="Click Element" library="Selenium2Library">
 <arg>//label[contains(text(),'Female')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:29.237" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
-<status status="PASS" starttime="20220110 23:52:29.237" endtime="20220110 23:52:29.331"/>
+<msg timestamp="20220114 01:02:48.693" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
+<status status="PASS" starttime="20220114 01:02:48.693" endtime="20220114 01:02:48.790"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:29.236" endtime="20220110 23:52:29.332"/>
+<status status="PASS" starttime="20220114 01:02:48.692" endtime="20220114 01:02:48.791"/>
 </kw>
 <kw name="Enter Phone Number" library="forms_resource">
 <arg>9991231234</arg>
@@ -186,38 +218,38 @@
 <arg>//input[@id='userNumber']</arg>
 <arg>${phone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:29.334" level="INFO">Typing text '9991231234' into text field '//input[@id='userNumber']'.</msg>
-<status status="PASS" starttime="20220110 23:52:29.333" endtime="20220110 23:52:29.465"/>
+<msg timestamp="20220114 01:02:48.792" level="INFO">Typing text '9991231234' into text field '//input[@id='userNumber']'.</msg>
+<status status="PASS" starttime="20220114 01:02:48.792" endtime="20220114 01:02:48.934"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:29.332" endtime="20220110 23:52:29.465"/>
+<status status="PASS" starttime="20220114 01:02:48.791" endtime="20220114 01:02:48.935"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:28.890" endtime="20220110 23:52:29.466"/>
+<status status="PASS" starttime="20220114 01:02:48.244" endtime="20220114 01:02:48.935"/>
 </kw>
 <kw name="Clear Element Text" library="Selenium2Library">
 <arg>//input[@id='dateOfBirthInput']</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220110 23:52:29.466" endtime="20220110 23:52:29.647"/>
+<status status="PASS" starttime="20220114 01:02:48.936" endtime="20220114 01:02:49.095"/>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <arg>//input[@id='dateOfBirthInput']</arg>
 <arg>this is not a Date</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:29.667" level="INFO">Typing text 'this is not a Date' into text field '//input[@id='dateOfBirthInput']'.</msg>
-<status status="PASS" starttime="20220110 23:52:29.666" endtime="20220110 23:52:30.027"/>
+<msg timestamp="20220114 01:02:49.097" level="INFO">Typing text 'this is not a Date' into text field '//input[@id='dateOfBirthInput']'.</msg>
+<status status="PASS" starttime="20220114 01:02:49.096" endtime="20220114 01:02:49.445"/>
 </kw>
 <kw name="Click Submit Button" library="forms_resource">
 <kw name="Set Focus To Element" library="Selenium2Library">
 <arg>//button[@id='submit']</arg>
 <doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220110 23:52:30.028" endtime="20220110 23:52:30.057"/>
+<status status="PASS" starttime="20220114 01:02:49.446" endtime="20220114 01:02:49.495"/>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <arg>//button[@id='submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:30.058" level="INFO">Clicking button '//button[@id='submit']'.</msg>
-<status status="PASS" starttime="20220110 23:52:30.057" endtime="20220110 23:52:30.185"/>
+<msg timestamp="20220114 01:02:49.496" level="INFO">Clicking button '//button[@id='submit']'.</msg>
+<status status="PASS" starttime="20220114 01:02:49.496" endtime="20220114 01:02:49.610"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:30.027" endtime="20220110 23:52:30.185"/>
+<status status="PASS" starttime="20220114 01:02:49.446" endtime="20220114 01:02:49.610"/>
 </kw>
 <kw name="Submit Modal Should Not Be Visible" library="forms_resource">
 <kw name="Element Should Not Be Visible" library="Selenium2Library">
@@ -225,36 +257,52 @@
 <doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220110 23:52:30.480" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220110 23:52:30.233" endtime="20220110 23:52:30.481"/>
+<msg timestamp="20220114 01:02:49.916" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220114 01:02:49.663" endtime="20220114 01:02:49.917"/>
 </kw>
-<msg timestamp="20220110 23:52:30.483" level="FAIL">The element '//div[@id='example-modal-sizes-title-lg']' should not be visible, but it is.</msg>
-<status status="FAIL" starttime="20220110 23:52:30.187" endtime="20220110 23:52:30.484"/>
+<msg timestamp="20220114 01:02:49.921" level="FAIL">The element '//div[@id='example-modal-sizes-title-lg']' should not be visible, but it is.</msg>
+<status status="FAIL" starttime="20220114 01:02:49.612" endtime="20220114 01:02:49.921"/>
 </kw>
-<status status="FAIL" starttime="20220110 23:52:30.186" endtime="20220110 23:52:30.485"/>
+<status status="FAIL" starttime="20220114 01:02:49.611" endtime="20220114 01:02:49.922"/>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220110 23:52:30.486" endtime="20220110 23:52:32.900"/>
+<status status="PASS" starttime="20220114 01:02:49.923" endtime="20220114 01:02:52.313"/>
 </kw>
 <tag>fails</tag>
-<status status="FAIL" starttime="20220110 23:52:25.170" endtime="20220110 23:52:32.901">The element '//div[@id='example-modal-sizes-title-lg']' should not be visible, but it is.</status>
+<status status="FAIL" starttime="20220114 01:02:43.921" endtime="20220114 01:02:52.314">The element '//div[@id='example-modal-sizes-title-lg']' should not be visible, but it is.</status>
 </test>
 <doc>A test suite for submitting a student form</doc>
-<status status="FAIL" starttime="20220110 23:52:17.209" endtime="20220110 23:52:32.904"/>
+<status status="FAIL" starttime="20220114 01:02:33.724" endtime="20220114 01:02:52.316"/>
 </suite>
-<suite id="s1-s2" name="Invalidvalues Test" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\forms\invalidvalues_test.robot">
-<kw name="Go To Website" library="forms_resource" type="SETUP">
+<suite id="s1-s2" name="Invalidvalues Test" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\forms_testsuite\invalidvalues_test.robot">
+<test id="s1-s2-t1" name="empty phone field">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Practice Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
 <kw name="Open Browser" library="Selenium2Library">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220110 23:52:32.922" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
-<status status="PASS" starttime="20220110 23:52:32.921" endtime="20220110 23:52:36.849"/>
+<msg timestamp="20220114 01:02:52.336" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:02:52.336" endtime="20220114 01:02:56.407"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:32.921" endtime="20220110 23:52:36.849"/>
+<status status="PASS" starttime="20220114 01:02:52.335" endtime="20220114 01:02:56.408"/>
 </kw>
-<test id="s1-s2-t1" name="empty phone field">
+<kw name="Go To Practice Page" library="forms_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${practicepage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:02:56.410" level="INFO">Opening url 'https://demoqa.com/automation-practice-form'</msg>
+<status status="PASS" starttime="20220114 01:02:56.410" endtime="20220114 01:02:57.271"/>
+</kw>
+<status status="PASS" starttime="20220114 01:02:56.409" endtime="20220114 01:02:57.271"/>
+</kw>
+<status status="PASS" starttime="20220114 01:02:52.335" endtime="20220114 01:02:57.271"/>
+</kw>
 <kw name="Invalid Values">
 <arg>${empty}</arg>
 <kw name="Enter First Name" library="forms_resource">
@@ -262,29 +310,29 @@
 <arg>//input[@id='firstName']</arg>
 <arg>Allie</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:36.856" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
-<status status="PASS" starttime="20220110 23:52:36.855" endtime="20220110 23:52:37.201"/>
+<msg timestamp="20220114 01:02:57.277" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
+<status status="PASS" starttime="20220114 01:02:57.277" endtime="20220114 01:02:57.882"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:36.854" endtime="20220110 23:52:37.201"/>
+<status status="PASS" starttime="20220114 01:02:57.276" endtime="20220114 01:02:57.882"/>
 </kw>
 <kw name="Enter Last Name" library="forms_resource">
 <kw name="Input Text" library="Selenium2Library">
 <arg>//input[@id='lastName']</arg>
 <arg>Test</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:37.203" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
-<status status="PASS" starttime="20220110 23:52:37.203" endtime="20220110 23:52:37.370"/>
+<msg timestamp="20220114 01:02:57.884" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
+<status status="PASS" starttime="20220114 01:02:57.883" endtime="20220114 01:02:58.121"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:37.202" endtime="20220110 23:52:37.371"/>
+<status status="PASS" starttime="20220114 01:02:57.883" endtime="20220114 01:02:58.121"/>
 </kw>
 <kw name="Select Gender Option" library="forms_resource">
 <kw name="Click Element" library="Selenium2Library">
 <arg>//label[contains(text(),'Female')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:37.373" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
-<status status="PASS" starttime="20220110 23:52:37.372" endtime="20220110 23:52:37.499"/>
+<msg timestamp="20220114 01:02:58.123" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
+<status status="PASS" starttime="20220114 01:02:58.122" endtime="20220114 01:02:58.291"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:37.371" endtime="20220110 23:52:37.500"/>
+<status status="PASS" starttime="20220114 01:02:58.121" endtime="20220114 01:02:58.292"/>
 </kw>
 <kw name="Enter Phone Number" library="forms_resource">
 <arg>${value}</arg>
@@ -292,25 +340,55 @@
 <arg>//input[@id='userNumber']</arg>
 <arg>${phone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:37.503" level="INFO">Typing text '' into text field '//input[@id='userNumber']'.</msg>
-<status status="PASS" starttime="20220110 23:52:37.502" endtime="20220110 23:52:37.692"/>
+<msg timestamp="20220114 01:02:58.294" level="INFO">Typing text '' into text field '//input[@id='userNumber']'.</msg>
+<status status="PASS" starttime="20220114 01:02:58.293" endtime="20220114 01:02:58.432"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:37.500" endtime="20220110 23:52:37.693"/>
+<status status="PASS" starttime="20220114 01:02:58.292" endtime="20220114 01:02:58.432"/>
 </kw>
 <kw name="Submit Modal Should Not Be Visible" library="forms_resource">
 <kw name="Element Should Not Be Visible" library="Selenium2Library">
 <arg>//div[@id='example-modal-sizes-title-lg']</arg>
 <doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
-<msg timestamp="20220110 23:52:37.713" level="INFO">Element '//div[@id='example-modal-sizes-title-lg']' did not exist.</msg>
-<status status="PASS" starttime="20220110 23:52:37.694" endtime="20220110 23:52:37.713"/>
+<msg timestamp="20220114 01:02:58.453" level="INFO">Element '//div[@id='example-modal-sizes-title-lg']' did not exist.</msg>
+<status status="PASS" starttime="20220114 01:02:58.433" endtime="20220114 01:02:58.454"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:37.693" endtime="20220110 23:52:37.713"/>
+<status status="PASS" starttime="20220114 01:02:58.432" endtime="20220114 01:02:58.454"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:36.851" endtime="20220110 23:52:37.713"/>
+<status status="PASS" starttime="20220114 01:02:57.272" endtime="20220114 01:02:58.454"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:36.849" endtime="20220110 23:52:37.714"/>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 01:02:58.455" endtime="20220114 01:03:00.820"/>
+</kw>
+<status status="PASS" starttime="20220114 01:02:52.334" endtime="20220114 01:03:00.821"/>
 </test>
 <test id="s1-s2-t2" name="less than 10 digits">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Practice Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 01:03:00.829" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:03:00.829" endtime="20220114 01:03:04.476"/>
+</kw>
+<status status="PASS" starttime="20220114 01:03:00.829" endtime="20220114 01:03:04.476"/>
+</kw>
+<kw name="Go To Practice Page" library="forms_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${practicepage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:03:04.477" level="INFO">Opening url 'https://demoqa.com/automation-practice-form'</msg>
+<status status="PASS" starttime="20220114 01:03:04.477" endtime="20220114 01:03:05.308"/>
+</kw>
+<status status="PASS" starttime="20220114 01:03:04.476" endtime="20220114 01:03:05.309"/>
+</kw>
+<status status="PASS" starttime="20220114 01:03:00.829" endtime="20220114 01:03:05.309"/>
+</kw>
 <kw name="Invalid Values">
 <arg>123</arg>
 <kw name="Enter First Name" library="forms_resource">
@@ -318,29 +396,29 @@
 <arg>//input[@id='firstName']</arg>
 <arg>Allie</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:37.721" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
-<status status="PASS" starttime="20220110 23:52:37.720" endtime="20220110 23:52:37.827"/>
+<msg timestamp="20220114 01:03:05.312" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
+<status status="PASS" starttime="20220114 01:03:05.311" endtime="20220114 01:03:05.601"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:37.719" endtime="20220110 23:52:37.827"/>
+<status status="PASS" starttime="20220114 01:03:05.310" endtime="20220114 01:03:05.602"/>
 </kw>
 <kw name="Enter Last Name" library="forms_resource">
 <kw name="Input Text" library="Selenium2Library">
 <arg>//input[@id='lastName']</arg>
 <arg>Test</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:37.828" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
-<status status="PASS" starttime="20220110 23:52:37.828" endtime="20220110 23:52:37.920"/>
+<msg timestamp="20220114 01:03:05.603" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
+<status status="PASS" starttime="20220114 01:03:05.603" endtime="20220114 01:03:05.744"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:37.827" endtime="20220110 23:52:37.920"/>
+<status status="PASS" starttime="20220114 01:03:05.602" endtime="20220114 01:03:05.744"/>
 </kw>
 <kw name="Select Gender Option" library="forms_resource">
 <kw name="Click Element" library="Selenium2Library">
 <arg>//label[contains(text(),'Female')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:37.922" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
-<status status="PASS" starttime="20220110 23:52:37.921" endtime="20220110 23:52:37.964"/>
+<msg timestamp="20220114 01:03:05.745" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
+<status status="PASS" starttime="20220114 01:03:05.745" endtime="20220114 01:03:05.824"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:37.920" endtime="20220110 23:52:37.964"/>
+<status status="PASS" starttime="20220114 01:03:05.745" endtime="20220114 01:03:05.824"/>
 </kw>
 <kw name="Enter Phone Number" library="forms_resource">
 <arg>${value}</arg>
@@ -348,25 +426,55 @@
 <arg>//input[@id='userNumber']</arg>
 <arg>${phone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:37.965" level="INFO">Typing text '123' into text field '//input[@id='userNumber']'.</msg>
-<status status="PASS" starttime="20220110 23:52:37.965" endtime="20220110 23:52:38.130"/>
+<msg timestamp="20220114 01:03:05.826" level="INFO">Typing text '123' into text field '//input[@id='userNumber']'.</msg>
+<status status="PASS" starttime="20220114 01:03:05.825" endtime="20220114 01:03:05.969"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:37.964" endtime="20220110 23:52:38.131"/>
+<status status="PASS" starttime="20220114 01:03:05.824" endtime="20220114 01:03:05.969"/>
 </kw>
 <kw name="Submit Modal Should Not Be Visible" library="forms_resource">
 <kw name="Element Should Not Be Visible" library="Selenium2Library">
 <arg>//div[@id='example-modal-sizes-title-lg']</arg>
 <doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
-<msg timestamp="20220110 23:52:38.143" level="INFO">Element '//div[@id='example-modal-sizes-title-lg']' did not exist.</msg>
-<status status="PASS" starttime="20220110 23:52:38.132" endtime="20220110 23:52:38.143"/>
+<msg timestamp="20220114 01:03:05.987" level="INFO">Element '//div[@id='example-modal-sizes-title-lg']' did not exist.</msg>
+<status status="PASS" starttime="20220114 01:03:05.970" endtime="20220114 01:03:05.987"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:38.131" endtime="20220110 23:52:38.143"/>
+<status status="PASS" starttime="20220114 01:03:05.969" endtime="20220114 01:03:05.988"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:37.718" endtime="20220110 23:52:38.143"/>
+<status status="PASS" starttime="20220114 01:03:05.309" endtime="20220114 01:03:05.988"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:37.716" endtime="20220110 23:52:38.144"/>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 01:03:05.989" endtime="20220114 01:03:08.374"/>
+</kw>
+<status status="PASS" starttime="20220114 01:03:00.827" endtime="20220114 01:03:08.374"/>
 </test>
 <test id="s1-s2-t3" name="negative phone values">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Practice Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 01:03:08.394" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:03:08.392" endtime="20220114 01:03:11.799"/>
+</kw>
+<status status="PASS" starttime="20220114 01:03:08.389" endtime="20220114 01:03:11.799"/>
+</kw>
+<kw name="Go To Practice Page" library="forms_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${practicepage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:03:11.800" level="INFO">Opening url 'https://demoqa.com/automation-practice-form'</msg>
+<status status="PASS" starttime="20220114 01:03:11.800" endtime="20220114 01:03:12.869"/>
+</kw>
+<status status="PASS" starttime="20220114 01:03:11.800" endtime="20220114 01:03:12.869"/>
+</kw>
+<status status="PASS" starttime="20220114 01:03:08.387" endtime="20220114 01:03:12.869"/>
+</kw>
 <kw name="Invalid Values">
 <arg>-543764339</arg>
 <kw name="Enter First Name" library="forms_resource">
@@ -374,29 +482,29 @@
 <arg>//input[@id='firstName']</arg>
 <arg>Allie</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:38.151" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
-<status status="PASS" starttime="20220110 23:52:38.149" endtime="20220110 23:52:38.298"/>
+<msg timestamp="20220114 01:03:12.872" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
+<status status="PASS" starttime="20220114 01:03:12.871" endtime="20220114 01:03:13.089"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:38.148" endtime="20220110 23:52:38.299"/>
+<status status="PASS" starttime="20220114 01:03:12.871" endtime="20220114 01:03:13.089"/>
 </kw>
 <kw name="Enter Last Name" library="forms_resource">
 <kw name="Input Text" library="Selenium2Library">
 <arg>//input[@id='lastName']</arg>
 <arg>Test</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:38.302" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
-<status status="PASS" starttime="20220110 23:52:38.300" endtime="20220110 23:52:38.432"/>
+<msg timestamp="20220114 01:03:13.091" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
+<status status="PASS" starttime="20220114 01:03:13.090" endtime="20220114 01:03:13.208"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:38.299" endtime="20220110 23:52:38.432"/>
+<status status="PASS" starttime="20220114 01:03:13.089" endtime="20220114 01:03:13.209"/>
 </kw>
 <kw name="Select Gender Option" library="forms_resource">
 <kw name="Click Element" library="Selenium2Library">
 <arg>//label[contains(text(),'Female')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:38.435" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
-<status status="PASS" starttime="20220110 23:52:38.434" endtime="20220110 23:52:38.472"/>
+<msg timestamp="20220114 01:03:13.212" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
+<status status="PASS" starttime="20220114 01:03:13.210" endtime="20220114 01:03:13.323"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:38.432" endtime="20220110 23:52:38.473"/>
+<status status="PASS" starttime="20220114 01:03:13.209" endtime="20220114 01:03:13.324"/>
 </kw>
 <kw name="Enter Phone Number" library="forms_resource">
 <arg>${value}</arg>
@@ -404,42 +512,58 @@
 <arg>//input[@id='userNumber']</arg>
 <arg>${phone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:38.474" level="INFO">Typing text '-543764339' into text field '//input[@id='userNumber']'.</msg>
-<status status="PASS" starttime="20220110 23:52:38.473" endtime="20220110 23:52:38.573"/>
+<msg timestamp="20220114 01:03:13.326" level="INFO">Typing text '-543764339' into text field '//input[@id='userNumber']'.</msg>
+<status status="PASS" starttime="20220114 01:03:13.325" endtime="20220114 01:03:13.474"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:38.473" endtime="20220110 23:52:38.573"/>
+<status status="PASS" starttime="20220114 01:03:13.324" endtime="20220114 01:03:13.474"/>
 </kw>
 <kw name="Submit Modal Should Not Be Visible" library="forms_resource">
 <kw name="Element Should Not Be Visible" library="Selenium2Library">
 <arg>//div[@id='example-modal-sizes-title-lg']</arg>
 <doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
-<msg timestamp="20220110 23:52:38.581" level="INFO">Element '//div[@id='example-modal-sizes-title-lg']' did not exist.</msg>
-<status status="PASS" starttime="20220110 23:52:38.574" endtime="20220110 23:52:38.581"/>
+<msg timestamp="20220114 01:03:13.487" level="INFO">Element '//div[@id='example-modal-sizes-title-lg']' did not exist.</msg>
+<status status="PASS" starttime="20220114 01:03:13.475" endtime="20220114 01:03:13.487"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:38.573" endtime="20220110 23:52:38.582"/>
+<status status="PASS" starttime="20220114 01:03:13.474" endtime="20220114 01:03:13.488"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:38.147" endtime="20220110 23:52:38.582"/>
+<status status="PASS" starttime="20220114 01:03:12.870" endtime="20220114 01:03:13.488"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:38.146" endtime="20220110 23:52:38.583"/>
-</test>
 <kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220110 23:52:38.586" endtime="20220110 23:52:40.946"/>
+<status status="PASS" starttime="20220114 01:03:13.488" endtime="20220114 01:03:15.814"/>
 </kw>
+<status status="PASS" starttime="20220114 01:03:08.382" endtime="20220114 01:03:15.814"/>
+</test>
 <doc>A test suite for submitting a student form</doc>
-<status status="PASS" starttime="20220110 23:52:32.909" endtime="20220110 23:52:40.946"/>
+<status status="PASS" starttime="20220114 01:02:52.319" endtime="20220114 01:03:15.825"/>
 </suite>
-<suite id="s1-s3" name="Uploadimage Test" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\forms\uploadimage_test.robot">
+<suite id="s1-s3" name="Uploadimage Test" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\forms_testsuite\uploadimage_test.robot">
 <test id="s1-s3-t1" name="Upload A File With Image Extension">
-<kw name="Go To Website" library="forms_resource" type="SETUP">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Practice Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
 <kw name="Open Browser" library="Selenium2Library">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220110 23:52:40.987" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
-<status status="PASS" starttime="20220110 23:52:40.986" endtime="20220110 23:52:44.597"/>
+<msg timestamp="20220114 01:03:15.861" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:03:15.858" endtime="20220114 01:03:19.286"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:40.985" endtime="20220110 23:52:44.598"/>
+<status status="PASS" starttime="20220114 01:03:15.857" endtime="20220114 01:03:19.286"/>
+</kw>
+<kw name="Go To Practice Page" library="forms_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${practicepage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:03:19.287" level="INFO">Opening url 'https://demoqa.com/automation-practice-form'</msg>
+<status status="PASS" starttime="20220114 01:03:19.286" endtime="20220114 01:03:20.148"/>
+</kw>
+<status status="PASS" starttime="20220114 01:03:19.286" endtime="20220114 01:03:20.148"/>
+</kw>
+<status status="PASS" starttime="20220114 01:03:15.856" endtime="20220114 01:03:20.148"/>
 </kw>
 <kw name="Enter Required Fields" library="forms_resource">
 <kw name="Enter First Name" library="forms_resource">
@@ -447,29 +571,29 @@
 <arg>//input[@id='firstName']</arg>
 <arg>Allie</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:44.601" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
-<status status="PASS" starttime="20220110 23:52:44.600" endtime="20220110 23:52:44.737"/>
+<msg timestamp="20220114 01:03:20.151" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
+<status status="PASS" starttime="20220114 01:03:20.150" endtime="20220114 01:03:20.361"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:44.600" endtime="20220110 23:52:44.738"/>
+<status status="PASS" starttime="20220114 01:03:20.150" endtime="20220114 01:03:20.362"/>
 </kw>
 <kw name="Enter Last Name" library="forms_resource">
 <kw name="Input Text" library="Selenium2Library">
 <arg>//input[@id='lastName']</arg>
 <arg>Test</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:44.740" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
-<status status="PASS" starttime="20220110 23:52:44.739" endtime="20220110 23:52:44.922"/>
+<msg timestamp="20220114 01:03:20.363" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
+<status status="PASS" starttime="20220114 01:03:20.363" endtime="20220114 01:03:20.485"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:44.738" endtime="20220110 23:52:44.922"/>
+<status status="PASS" starttime="20220114 01:03:20.362" endtime="20220114 01:03:20.486"/>
 </kw>
 <kw name="Select Gender Option" library="forms_resource">
 <kw name="Click Element" library="Selenium2Library">
 <arg>//label[contains(text(),'Female')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:44.923" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
-<status status="PASS" starttime="20220110 23:52:44.923" endtime="20220110 23:52:45.017"/>
+<msg timestamp="20220114 01:03:20.488" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
+<status status="PASS" starttime="20220114 01:03:20.487" endtime="20220114 01:03:20.606"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:44.922" endtime="20220110 23:52:45.018"/>
+<status status="PASS" starttime="20220114 01:03:20.486" endtime="20220114 01:03:20.606"/>
 </kw>
 <kw name="Enter Phone Number" library="forms_resource">
 <arg>9991231234</arg>
@@ -477,63 +601,79 @@
 <arg>//input[@id='userNumber']</arg>
 <arg>${phone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:45.020" level="INFO">Typing text '9991231234' into text field '//input[@id='userNumber']'.</msg>
-<status status="PASS" starttime="20220110 23:52:45.019" endtime="20220110 23:52:45.180"/>
+<msg timestamp="20220114 01:03:20.608" level="INFO">Typing text '9991231234' into text field '//input[@id='userNumber']'.</msg>
+<status status="PASS" starttime="20220114 01:03:20.608" endtime="20220114 01:03:20.765"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:45.018" endtime="20220110 23:52:45.181"/>
+<status status="PASS" starttime="20220114 01:03:20.607" endtime="20220114 01:03:20.765"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:44.599" endtime="20220110 23:52:45.181"/>
+<status status="PASS" starttime="20220114 01:03:20.149" endtime="20220114 01:03:20.765"/>
 </kw>
 <kw name="Choose Image File" library="forms_resource">
 <kw name="Choose File" library="Selenium2Library">
 <arg>//input[@id='uploadPicture']</arg>
-<arg>C:\\Users\\Bonnie\\Documents\\Projects\\test-automation-practices\\robotframe_tests\\forms/min2bg.jpg</arg>
+<arg>C:\\Users\\Bonnie\\Documents\\Projects\\test-automation-practices\\robotframe_tests\\forms_testsuite/min2bg.jpg</arg>
 <doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220110 23:52:45.183" level="INFO">Sending C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\forms\min2bg.jpg to browser.</msg>
-<status status="PASS" starttime="20220110 23:52:45.182" endtime="20220110 23:52:45.239"/>
+<msg timestamp="20220114 01:03:20.767" level="INFO">Sending C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\forms_testsuite\min2bg.jpg to browser.</msg>
+<status status="PASS" starttime="20220114 01:03:20.766" endtime="20220114 01:03:20.825"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:45.182" endtime="20220110 23:52:45.239"/>
+<status status="PASS" starttime="20220114 01:03:20.766" endtime="20220114 01:03:20.825"/>
 </kw>
 <kw name="Click Submit Button" library="forms_resource">
 <kw name="Set Focus To Element" library="Selenium2Library">
 <arg>//button[@id='submit']</arg>
 <doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220110 23:52:45.241" endtime="20220110 23:52:45.267"/>
+<status status="PASS" starttime="20220114 01:03:20.827" endtime="20220114 01:03:20.860"/>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <arg>//button[@id='submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:45.268" level="INFO">Clicking button '//button[@id='submit']'.</msg>
-<status status="PASS" starttime="20220110 23:52:45.267" endtime="20220110 23:52:45.373"/>
+<msg timestamp="20220114 01:03:20.861" level="INFO">Clicking button '//button[@id='submit']'.</msg>
+<status status="PASS" starttime="20220114 01:03:20.861" endtime="20220114 01:03:20.962"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:45.240" endtime="20220110 23:52:45.373"/>
+<status status="PASS" starttime="20220114 01:03:20.826" endtime="20220114 01:03:20.962"/>
 </kw>
 <kw name="Image Name Should Be on Modal" library="forms_resource">
 <kw name="Element Should Contain" library="Selenium2Library">
 <arg>//body/div[4]/div[1]/div[1]/div[2]/div[1]/table[1]</arg>
 <arg>min2bg.jpg</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220110 23:52:45.439" level="INFO">Element '//body/div[4]/div[1]/div[1]/div[2]/div[1]/table[1]' contains text 'min2bg.jpg'.</msg>
-<status status="PASS" starttime="20220110 23:52:45.374" endtime="20220110 23:52:45.439"/>
+<msg timestamp="20220114 01:03:21.024" level="INFO">Element '//body/div[4]/div[1]/div[1]/div[2]/div[1]/table[1]' contains text 'min2bg.jpg'.</msg>
+<status status="PASS" starttime="20220114 01:03:20.963" endtime="20220114 01:03:21.025"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:45.374" endtime="20220110 23:52:45.439"/>
+<status status="PASS" starttime="20220114 01:03:20.962" endtime="20220114 01:03:21.025"/>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220110 23:52:45.440" endtime="20220110 23:52:47.869"/>
+<status status="PASS" starttime="20220114 01:03:21.026" endtime="20220114 01:03:23.388"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:40.983" endtime="20220110 23:52:47.870"/>
+<status status="PASS" starttime="20220114 01:03:15.855" endtime="20220114 01:03:23.388"/>
 </test>
 <test id="s1-s3-t2" name="Upload a non image file">
-<kw name="Go To Website" library="forms_resource" type="SETUP">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Practice Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
 <kw name="Open Browser" library="Selenium2Library">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220110 23:52:47.888" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
-<status status="PASS" starttime="20220110 23:52:47.885" endtime="20220110 23:52:51.613"/>
+<msg timestamp="20220114 01:03:23.408" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:03:23.406" endtime="20220114 01:03:27.219"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:47.881" endtime="20220110 23:52:51.613"/>
+<status status="PASS" starttime="20220114 01:03:23.404" endtime="20220114 01:03:27.220"/>
+</kw>
+<kw name="Go To Practice Page" library="forms_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${practicepage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:03:27.221" level="INFO">Opening url 'https://demoqa.com/automation-practice-form'</msg>
+<status status="PASS" starttime="20220114 01:03:27.220" endtime="20220114 01:03:28.032"/>
+</kw>
+<status status="PASS" starttime="20220114 01:03:27.220" endtime="20220114 01:03:28.032"/>
+</kw>
+<status status="PASS" starttime="20220114 01:03:23.401" endtime="20220114 01:03:28.032"/>
 </kw>
 <kw name="Enter Required Fields" library="forms_resource">
 <kw name="Enter First Name" library="forms_resource">
@@ -541,29 +681,29 @@
 <arg>//input[@id='firstName']</arg>
 <arg>Allie</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:51.616" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
-<status status="PASS" starttime="20220110 23:52:51.615" endtime="20220110 23:52:51.741"/>
+<msg timestamp="20220114 01:03:28.034" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
+<status status="PASS" starttime="20220114 01:03:28.034" endtime="20220114 01:03:28.235"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:51.615" endtime="20220110 23:52:51.742"/>
+<status status="PASS" starttime="20220114 01:03:28.033" endtime="20220114 01:03:28.235"/>
 </kw>
 <kw name="Enter Last Name" library="forms_resource">
 <kw name="Input Text" library="Selenium2Library">
 <arg>//input[@id='lastName']</arg>
 <arg>Test</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:51.744" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
-<status status="PASS" starttime="20220110 23:52:51.743" endtime="20220110 23:52:51.960"/>
+<msg timestamp="20220114 01:03:28.237" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
+<status status="PASS" starttime="20220114 01:03:28.236" endtime="20220114 01:03:28.371"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:51.742" endtime="20220110 23:52:51.961"/>
+<status status="PASS" starttime="20220114 01:03:28.236" endtime="20220114 01:03:28.371"/>
 </kw>
 <kw name="Select Gender Option" library="forms_resource">
 <kw name="Click Element" library="Selenium2Library">
 <arg>//label[contains(text(),'Female')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:51.963" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
-<status status="PASS" starttime="20220110 23:52:51.962" endtime="20220110 23:52:52.052"/>
+<msg timestamp="20220114 01:03:28.373" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
+<status status="PASS" starttime="20220114 01:03:28.372" endtime="20220114 01:03:28.498"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:51.961" endtime="20220110 23:52:52.052"/>
+<status status="PASS" starttime="20220114 01:03:28.371" endtime="20220114 01:03:28.498"/>
 </kw>
 <kw name="Enter Phone Number" library="forms_resource">
 <arg>9991231234</arg>
@@ -571,36 +711,36 @@
 <arg>//input[@id='userNumber']</arg>
 <arg>${phone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:52.053" level="INFO">Typing text '9991231234' into text field '//input[@id='userNumber']'.</msg>
-<status status="PASS" starttime="20220110 23:52:52.053" endtime="20220110 23:52:52.213"/>
+<msg timestamp="20220114 01:03:28.501" level="INFO">Typing text '9991231234' into text field '//input[@id='userNumber']'.</msg>
+<status status="PASS" starttime="20220114 01:03:28.500" endtime="20220114 01:03:28.629"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:52.052" endtime="20220110 23:52:52.213"/>
+<status status="PASS" starttime="20220114 01:03:28.499" endtime="20220114 01:03:28.629"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:51.614" endtime="20220110 23:52:52.213"/>
+<status status="PASS" starttime="20220114 01:03:28.033" endtime="20220114 01:03:28.630"/>
 </kw>
 <kw name="Choose Non-Image File" library="forms_resource">
 <kw name="Choose File" library="Selenium2Library">
 <arg>//input[@id='uploadPicture']</arg>
-<arg>C:\\Users\\Bonnie\\Documents\\Projects\\test-automation-practices\\robotframe_tests\\forms/output.xml</arg>
+<arg>C:\\Users\\Bonnie\\Documents\\Projects\\test-automation-practices\\robotframe_tests\\forms_testsuite/output.xml</arg>
 <doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220110 23:52:52.215" level="INFO">Sending C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\forms\output.xml to browser.</msg>
-<status status="PASS" starttime="20220110 23:52:52.214" endtime="20220110 23:52:52.277"/>
+<msg timestamp="20220114 01:03:28.631" level="INFO">Sending C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\forms_testsuite\output.xml to browser.</msg>
+<status status="PASS" starttime="20220114 01:03:28.631" endtime="20220114 01:03:28.689"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:52.214" endtime="20220110 23:52:52.277"/>
+<status status="PASS" starttime="20220114 01:03:28.630" endtime="20220114 01:03:28.690"/>
 </kw>
 <kw name="Click Submit Button" library="forms_resource">
 <kw name="Set Focus To Element" library="Selenium2Library">
 <arg>//button[@id='submit']</arg>
 <doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220110 23:52:52.279" endtime="20220110 23:52:52.303"/>
+<status status="PASS" starttime="20220114 01:03:28.691" endtime="20220114 01:03:28.718"/>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <arg>//button[@id='submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:52.305" level="INFO">Clicking button '//button[@id='submit']'.</msg>
-<status status="PASS" starttime="20220110 23:52:52.303" endtime="20220110 23:52:52.412"/>
+<msg timestamp="20220114 01:03:28.719" level="INFO">Clicking button '//button[@id='submit']'.</msg>
+<status status="PASS" starttime="20220114 01:03:28.718" endtime="20220114 01:03:28.827"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:52.279" endtime="20220110 23:52:52.412"/>
+<status status="PASS" starttime="20220114 01:03:28.690" endtime="20220114 01:03:28.828"/>
 </kw>
 <kw name="Error Should Be Visible" library="forms_resource">
 <kw name="Element Should Be Visible" library="Selenium2Library">
@@ -608,35 +748,51 @@
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220110 23:52:52.788" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220110 23:52:52.437" endtime="20220110 23:52:52.788"/>
+<msg timestamp="20220114 01:03:29.138" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220114 01:03:28.849" endtime="20220114 01:03:29.138"/>
 </kw>
-<msg timestamp="20220110 23:52:52.790" level="FAIL">Element with locator '//div[@id='errorMessage']' not found.</msg>
-<status status="FAIL" starttime="20220110 23:52:52.414" endtime="20220110 23:52:52.790"/>
+<msg timestamp="20220114 01:03:29.140" level="FAIL">Element with locator '//div[@id='errorMessage']' not found.</msg>
+<status status="FAIL" starttime="20220114 01:03:28.830" endtime="20220114 01:03:29.140"/>
 </kw>
-<status status="FAIL" starttime="20220110 23:52:52.413" endtime="20220110 23:52:52.791"/>
+<status status="FAIL" starttime="20220114 01:03:28.829" endtime="20220114 01:03:29.141"/>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220110 23:52:52.793" endtime="20220110 23:52:55.195"/>
+<status status="PASS" starttime="20220114 01:03:29.145" endtime="20220114 01:03:31.480"/>
 </kw>
 <tag>fails</tag>
-<status status="FAIL" starttime="20220110 23:52:47.877" endtime="20220110 23:52:55.196">Element with locator '//div[@id='errorMessage']' not found.</status>
+<status status="FAIL" starttime="20220114 01:03:23.397" endtime="20220114 01:03:31.481">Element with locator '//div[@id='errorMessage']' not found.</status>
 </test>
 <doc>A test suite for submitting a student form</doc>
-<status status="FAIL" starttime="20220110 23:52:40.959" endtime="20220110 23:52:55.198"/>
+<status status="FAIL" starttime="20220114 01:03:15.840" endtime="20220114 01:03:31.484"/>
 </suite>
-<suite id="s1-s4" name="Validform Tests" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\forms\validform_tests.robot">
+<suite id="s1-s4" name="Validform Tests" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\forms_testsuite\validform_tests.robot">
 <test id="s1-s4-t1" name="Student Can Enter Valid Values">
-<kw name="Go To Website" library="forms_resource" type="SETUP">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Practice Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
 <kw name="Open Browser" library="Selenium2Library">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220110 23:52:55.220" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
-<status status="PASS" starttime="20220110 23:52:55.219" endtime="20220110 23:52:59.132"/>
+<msg timestamp="20220114 01:03:31.501" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:03:31.501" endtime="20220114 01:03:35.612"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:55.217" endtime="20220110 23:52:59.133"/>
+<status status="PASS" starttime="20220114 01:03:31.500" endtime="20220114 01:03:35.612"/>
+</kw>
+<kw name="Go To Practice Page" library="forms_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${practicepage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:03:35.614" level="INFO">Opening url 'https://demoqa.com/automation-practice-form'</msg>
+<status status="PASS" starttime="20220114 01:03:35.613" endtime="20220114 01:03:36.575"/>
+</kw>
+<status status="PASS" starttime="20220114 01:03:35.613" endtime="20220114 01:03:36.575"/>
+</kw>
+<status status="PASS" starttime="20220114 01:03:31.500" endtime="20220114 01:03:36.575"/>
 </kw>
 <kw name="Enter Required Fields" library="forms_resource">
 <kw name="Enter First Name" library="forms_resource">
@@ -644,29 +800,29 @@
 <arg>//input[@id='firstName']</arg>
 <arg>Allie</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:59.137" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
-<status status="PASS" starttime="20220110 23:52:59.137" endtime="20220110 23:52:59.288"/>
+<msg timestamp="20220114 01:03:36.579" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
+<status status="PASS" starttime="20220114 01:03:36.578" endtime="20220114 01:03:36.949"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:59.136" endtime="20220110 23:52:59.288"/>
+<status status="PASS" starttime="20220114 01:03:36.577" endtime="20220114 01:03:36.950"/>
 </kw>
 <kw name="Enter Last Name" library="forms_resource">
 <kw name="Input Text" library="Selenium2Library">
 <arg>//input[@id='lastName']</arg>
 <arg>Test</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:59.290" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
-<status status="PASS" starttime="20220110 23:52:59.289" endtime="20220110 23:52:59.415"/>
+<msg timestamp="20220114 01:03:36.953" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
+<status status="PASS" starttime="20220114 01:03:36.951" endtime="20220114 01:03:37.111"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:59.289" endtime="20220110 23:52:59.416"/>
+<status status="PASS" starttime="20220114 01:03:36.950" endtime="20220114 01:03:37.112"/>
 </kw>
 <kw name="Select Gender Option" library="forms_resource">
 <kw name="Click Element" library="Selenium2Library">
 <arg>//label[contains(text(),'Female')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:59.417" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
-<status status="PASS" starttime="20220110 23:52:59.416" endtime="20220110 23:52:59.613"/>
+<msg timestamp="20220114 01:03:37.113" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
+<status status="PASS" starttime="20220114 01:03:37.113" endtime="20220114 01:03:37.243"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:59.416" endtime="20220110 23:52:59.613"/>
+<status status="PASS" starttime="20220114 01:03:37.112" endtime="20220114 01:03:37.243"/>
 </kw>
 <kw name="Enter Phone Number" library="forms_resource">
 <arg>9991231234</arg>
@@ -674,144 +830,160 @@
 <arg>//input[@id='userNumber']</arg>
 <arg>${phone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:59.615" level="INFO">Typing text '9991231234' into text field '//input[@id='userNumber']'.</msg>
-<status status="PASS" starttime="20220110 23:52:59.614" endtime="20220110 23:52:59.765"/>
+<msg timestamp="20220114 01:03:37.245" level="INFO">Typing text '9991231234' into text field '//input[@id='userNumber']'.</msg>
+<status status="PASS" starttime="20220114 01:03:37.244" endtime="20220114 01:03:37.440"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:59.613" endtime="20220110 23:52:59.766"/>
+<status status="PASS" starttime="20220114 01:03:37.244" endtime="20220114 01:03:37.440"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:59.135" endtime="20220110 23:52:59.766"/>
+<status status="PASS" starttime="20220114 01:03:36.576" endtime="20220114 01:03:37.440"/>
 </kw>
 <kw name="Enter Email" library="forms_resource">
 <kw name="Input Text" library="Selenium2Library">
 <arg>//input[@id='userEmail']</arg>
 <arg>allietest@fake.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:52:59.768" level="INFO">Typing text 'allietest@fake.com' into text field '//input[@id='userEmail']'.</msg>
-<status status="PASS" starttime="20220110 23:52:59.768" endtime="20220110 23:52:59.932"/>
+<msg timestamp="20220114 01:03:37.453" level="INFO">Typing text 'allietest@fake.com' into text field '//input[@id='userEmail']'.</msg>
+<status status="PASS" starttime="20220114 01:03:37.452" endtime="20220114 01:03:37.765"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:59.767" endtime="20220110 23:52:59.933"/>
+<status status="PASS" starttime="20220114 01:03:37.450" endtime="20220114 01:03:37.766"/>
 </kw>
 <kw name="Enter Birth Date" library="forms_resource">
 <kw name="Clear Element Text" library="Selenium2Library">
 <arg>//input[@id='dateOfBirthInput']</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220110 23:52:59.934" endtime="20220110 23:53:00.116"/>
+<status status="PASS" starttime="20220114 01:03:37.768" endtime="20220114 01:03:38.011"/>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <arg>//input[@id='dateOfBirthInput']</arg>
 <arg>January 10, 1967</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:00.117" level="INFO">Typing text 'January 10, 1967' into text field '//input[@id='dateOfBirthInput']'.</msg>
-<status status="PASS" starttime="20220110 23:53:00.116" endtime="20220110 23:53:00.466"/>
+<msg timestamp="20220114 01:03:38.012" level="INFO">Typing text 'January 10, 1967' into text field '//input[@id='dateOfBirthInput']'.</msg>
+<status status="PASS" starttime="20220114 01:03:38.011" endtime="20220114 01:03:38.436"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:59.933" endtime="20220110 23:53:00.467"/>
+<status status="PASS" starttime="20220114 01:03:37.767" endtime="20220114 01:03:38.437"/>
 </kw>
 <kw name="Enter Subjects" library="forms_resource">
 <kw name="Input Text" library="Selenium2Library">
 <arg>//input[@id='subjectsInput']</arg>
 <arg>Maths</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:00.468" level="INFO">Typing text 'Maths' into text field '//input[@id='subjectsInput']'.</msg>
-<status status="PASS" starttime="20220110 23:53:00.468" endtime="20220110 23:53:00.619"/>
+<msg timestamp="20220114 01:03:38.439" level="INFO">Typing text 'Maths' into text field '//input[@id='subjectsInput']'.</msg>
+<status status="PASS" starttime="20220114 01:03:38.438" endtime="20220114 01:03:38.628"/>
 </kw>
 <kw name="Press Keys" library="Selenium2Library">
 <arg>//input[@id='subjectsInput']</arg>
 <arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220110 23:53:00.620" level="INFO">Sending key(s) ('ENTER',) to //input[@id='subjectsInput'] element.</msg>
-<msg timestamp="20220110 23:53:01.045" level="INFO">Pressing special key ENTER to element.</msg>
-<msg timestamp="20220110 23:53:01.045" level="INFO">Releasing special key ENTER.</msg>
-<status status="PASS" starttime="20220110 23:53:00.619" endtime="20220110 23:53:01.078"/>
+<msg timestamp="20220114 01:03:38.629" level="INFO">Sending key(s) ('ENTER',) to //input[@id='subjectsInput'] element.</msg>
+<msg timestamp="20220114 01:03:38.962" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20220114 01:03:38.962" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220114 01:03:38.628" endtime="20220114 01:03:38.991"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:00.467" endtime="20220110 23:53:01.078"/>
+<status status="PASS" starttime="20220114 01:03:38.437" endtime="20220114 01:03:38.991"/>
 </kw>
 <kw name="Select Hobbies" library="forms_resource">
 <arg>Sports</arg>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//label[contains(text(),'${hobby}')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:01.080" level="INFO">Clicking element '//label[contains(text(),'Sports')]'.</msg>
-<status status="PASS" starttime="20220110 23:53:01.080" endtime="20220110 23:53:01.143"/>
+<msg timestamp="20220114 01:03:38.995" level="INFO">Clicking element '//label[contains(text(),'Sports')]'.</msg>
+<status status="PASS" starttime="20220114 01:03:38.994" endtime="20220114 01:03:39.077"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:01.079" endtime="20220110 23:53:01.143"/>
+<status status="PASS" starttime="20220114 01:03:38.993" endtime="20220114 01:03:39.077"/>
 </kw>
 <kw name="Select State Option" library="forms_resource">
 <kw name="Input Text" library="Selenium2Library">
 <arg>//input[@id='react-select-3-input']</arg>
 <arg>Haryana</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:01.146" level="INFO">Typing text 'Haryana' into text field '//input[@id='react-select-3-input']'.</msg>
-<status status="PASS" starttime="20220110 23:53:01.145" endtime="20220110 23:53:01.300"/>
+<msg timestamp="20220114 01:03:39.079" level="INFO">Typing text 'Haryana' into text field '//input[@id='react-select-3-input']'.</msg>
+<status status="PASS" starttime="20220114 01:03:39.079" endtime="20220114 01:03:39.248"/>
 </kw>
 <kw name="Press Keys" library="Selenium2Library">
 <arg>//input[@id='react-select-3-input']</arg>
 <arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220110 23:53:01.302" level="INFO">Sending key(s) ('ENTER',) to //input[@id='react-select-3-input'] element.</msg>
-<msg timestamp="20220110 23:53:01.596" level="INFO">Pressing special key ENTER to element.</msg>
-<msg timestamp="20220110 23:53:01.597" level="INFO">Releasing special key ENTER.</msg>
-<status status="PASS" starttime="20220110 23:53:01.301" endtime="20220110 23:53:01.628"/>
+<msg timestamp="20220114 01:03:39.249" level="INFO">Sending key(s) ('ENTER',) to //input[@id='react-select-3-input'] element.</msg>
+<msg timestamp="20220114 01:03:39.559" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20220114 01:03:39.560" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220114 01:03:39.248" endtime="20220114 01:03:39.597"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:01.144" endtime="20220110 23:53:01.629"/>
+<status status="PASS" starttime="20220114 01:03:39.078" endtime="20220114 01:03:39.598"/>
 </kw>
 <kw name="Select City Option" library="forms_resource">
 <kw name="Input Text" library="Selenium2Library">
 <arg>//input[@id='react-select-4-input']</arg>
 <arg>Panipat</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:01.634" level="INFO">Typing text 'Panipat' into text field '//input[@id='react-select-4-input']'.</msg>
-<status status="PASS" starttime="20220110 23:53:01.633" endtime="20220110 23:53:01.798"/>
+<msg timestamp="20220114 01:03:39.605" level="INFO">Typing text 'Panipat' into text field '//input[@id='react-select-4-input']'.</msg>
+<status status="PASS" starttime="20220114 01:03:39.604" endtime="20220114 01:03:39.775"/>
 </kw>
 <kw name="Press Keys" library="Selenium2Library">
 <arg>//input[@id='react-select-4-input']</arg>
 <arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220110 23:53:01.799" level="INFO">Sending key(s) ('ENTER',) to //input[@id='react-select-4-input'] element.</msg>
-<msg timestamp="20220110 23:53:02.096" level="INFO">Pressing special key ENTER to element.</msg>
-<msg timestamp="20220110 23:53:02.097" level="INFO">Releasing special key ENTER.</msg>
-<status status="PASS" starttime="20220110 23:53:01.798" endtime="20220110 23:53:02.132"/>
+<msg timestamp="20220114 01:03:39.776" level="INFO">Sending key(s) ('ENTER',) to //input[@id='react-select-4-input'] element.</msg>
+<msg timestamp="20220114 01:03:40.090" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20220114 01:03:40.091" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220114 01:03:39.775" endtime="20220114 01:03:40.114"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:01.631" endtime="20220110 23:53:02.133"/>
+<status status="PASS" starttime="20220114 01:03:39.602" endtime="20220114 01:03:40.115"/>
 </kw>
 <kw name="Click Submit Button" library="forms_resource">
 <kw name="Set Focus To Element" library="Selenium2Library">
 <arg>//button[@id='submit']</arg>
 <doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220110 23:53:02.135" endtime="20220110 23:53:02.168"/>
+<status status="PASS" starttime="20220114 01:03:40.117" endtime="20220114 01:03:40.144"/>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <arg>//button[@id='submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:02.169" level="INFO">Clicking button '//button[@id='submit']'.</msg>
-<status status="PASS" starttime="20220110 23:53:02.168" endtime="20220110 23:53:02.264"/>
+<msg timestamp="20220114 01:03:40.145" level="INFO">Clicking button '//button[@id='submit']'.</msg>
+<status status="PASS" starttime="20220114 01:03:40.145" endtime="20220114 01:03:40.237"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:02.134" endtime="20220110 23:53:02.264"/>
+<status status="PASS" starttime="20220114 01:03:40.116" endtime="20220114 01:03:40.237"/>
 </kw>
 <kw name="Submit Modal Should Be Visible" library="forms_resource">
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>//div[@id='example-modal-sizes-title-lg']</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220110 23:53:02.312" level="INFO">Element '//div[@id='example-modal-sizes-title-lg']' is displayed.</msg>
-<status status="PASS" starttime="20220110 23:53:02.266" endtime="20220110 23:53:02.312"/>
+<msg timestamp="20220114 01:03:40.290" level="INFO">Element '//div[@id='example-modal-sizes-title-lg']' is displayed.</msg>
+<status status="PASS" starttime="20220114 01:03:40.239" endtime="20220114 01:03:40.290"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:02.265" endtime="20220110 23:53:02.312"/>
+<status status="PASS" starttime="20220114 01:03:40.238" endtime="20220114 01:03:40.291"/>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220110 23:53:02.314" endtime="20220110 23:53:04.738"/>
+<status status="PASS" starttime="20220114 01:03:40.292" endtime="20220114 01:03:42.618"/>
 </kw>
-<status status="PASS" starttime="20220110 23:52:55.215" endtime="20220110 23:53:04.740"/>
+<status status="PASS" starttime="20220114 01:03:31.499" endtime="20220114 01:03:42.618"/>
 </test>
 <test id="s1-s4-t2" name="Student Can Select One Hobby">
-<kw name="Go To Website" library="forms_resource" type="SETUP">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Practice Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
 <kw name="Open Browser" library="Selenium2Library">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220110 23:53:04.760" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
-<status status="PASS" starttime="20220110 23:53:04.756" endtime="20220110 23:53:08.483"/>
+<msg timestamp="20220114 01:03:42.623" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:03:42.623" endtime="20220114 01:03:46.250"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:04.750" endtime="20220110 23:53:08.483"/>
+<status status="PASS" starttime="20220114 01:03:42.622" endtime="20220114 01:03:46.251"/>
+</kw>
+<kw name="Go To Practice Page" library="forms_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${practicepage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:03:46.251" level="INFO">Opening url 'https://demoqa.com/automation-practice-form'</msg>
+<status status="PASS" starttime="20220114 01:03:46.251" endtime="20220114 01:03:47.082"/>
+</kw>
+<status status="PASS" starttime="20220114 01:03:46.251" endtime="20220114 01:03:47.082"/>
+</kw>
+<status status="PASS" starttime="20220114 01:03:42.622" endtime="20220114 01:03:47.082"/>
 </kw>
 <kw name="Enter Required Fields" library="forms_resource">
 <kw name="Enter First Name" library="forms_resource">
@@ -819,29 +991,29 @@
 <arg>//input[@id='firstName']</arg>
 <arg>Allie</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:08.486" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
-<status status="PASS" starttime="20220110 23:53:08.485" endtime="20220110 23:53:08.734"/>
+<msg timestamp="20220114 01:03:47.084" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
+<status status="PASS" starttime="20220114 01:03:47.084" endtime="20220114 01:03:47.215"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:08.485" endtime="20220110 23:53:08.734"/>
+<status status="PASS" starttime="20220114 01:03:47.084" endtime="20220114 01:03:47.216"/>
 </kw>
 <kw name="Enter Last Name" library="forms_resource">
 <kw name="Input Text" library="Selenium2Library">
 <arg>//input[@id='lastName']</arg>
 <arg>Test</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:08.737" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
-<status status="PASS" starttime="20220110 23:53:08.735" endtime="20220110 23:53:08.987"/>
+<msg timestamp="20220114 01:03:47.218" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
+<status status="PASS" starttime="20220114 01:03:47.217" endtime="20220114 01:03:47.414"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:08.734" endtime="20220110 23:53:08.987"/>
+<status status="PASS" starttime="20220114 01:03:47.216" endtime="20220114 01:03:47.414"/>
 </kw>
 <kw name="Select Gender Option" library="forms_resource">
 <kw name="Click Element" library="Selenium2Library">
 <arg>//label[contains(text(),'Female')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:08.989" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
-<status status="PASS" starttime="20220110 23:53:08.988" endtime="20220110 23:53:09.100"/>
+<msg timestamp="20220114 01:03:47.416" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
+<status status="PASS" starttime="20220114 01:03:47.415" endtime="20220114 01:03:47.509"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:08.988" endtime="20220110 23:53:09.101"/>
+<status status="PASS" starttime="20220114 01:03:47.415" endtime="20220114 01:03:47.509"/>
 </kw>
 <kw name="Enter Phone Number" library="forms_resource">
 <arg>9991231234</arg>
@@ -849,63 +1021,79 @@
 <arg>//input[@id='userNumber']</arg>
 <arg>${phone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:09.104" level="INFO">Typing text '9991231234' into text field '//input[@id='userNumber']'.</msg>
-<status status="PASS" starttime="20220110 23:53:09.102" endtime="20220110 23:53:09.238"/>
+<msg timestamp="20220114 01:03:47.511" level="INFO">Typing text '9991231234' into text field '//input[@id='userNumber']'.</msg>
+<status status="PASS" starttime="20220114 01:03:47.510" endtime="20220114 01:03:47.667"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:09.101" endtime="20220110 23:53:09.238"/>
+<status status="PASS" starttime="20220114 01:03:47.510" endtime="20220114 01:03:47.667"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:08.484" endtime="20220110 23:53:09.239"/>
+<status status="PASS" starttime="20220114 01:03:47.083" endtime="20220114 01:03:47.667"/>
 </kw>
 <kw name="Select Hobbies" library="forms_resource">
 <arg>Reading</arg>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//label[contains(text(),'${hobby}')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:09.241" level="INFO">Clicking element '//label[contains(text(),'Reading')]'.</msg>
-<status status="PASS" starttime="20220110 23:53:09.241" endtime="20220110 23:53:09.317"/>
+<msg timestamp="20220114 01:03:47.669" level="INFO">Clicking element '//label[contains(text(),'Reading')]'.</msg>
+<status status="PASS" starttime="20220114 01:03:47.669" endtime="20220114 01:03:47.745"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:09.240" endtime="20220110 23:53:09.317"/>
+<status status="PASS" starttime="20220114 01:03:47.668" endtime="20220114 01:03:47.745"/>
 </kw>
 <kw name="Click Submit Button" library="forms_resource">
 <kw name="Set Focus To Element" library="Selenium2Library">
 <arg>//button[@id='submit']</arg>
 <doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220110 23:53:09.318" endtime="20220110 23:53:09.348"/>
+<status status="PASS" starttime="20220114 01:03:47.747" endtime="20220114 01:03:47.775"/>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <arg>//button[@id='submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:09.349" level="INFO">Clicking button '//button[@id='submit']'.</msg>
-<status status="PASS" starttime="20220110 23:53:09.349" endtime="20220110 23:53:09.473"/>
+<msg timestamp="20220114 01:03:47.777" level="INFO">Clicking button '//button[@id='submit']'.</msg>
+<status status="PASS" starttime="20220114 01:03:47.776" endtime="20220114 01:03:47.894"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:09.318" endtime="20220110 23:53:09.473"/>
+<status status="PASS" starttime="20220114 01:03:47.746" endtime="20220114 01:03:47.894"/>
 </kw>
 <kw name="Selected Hobby Should Be on Modal" library="forms_resource">
 <kw name="Element Should Contain" library="Selenium2Library">
 <arg>//body/div[4]/div[1]/div[1]/div[2]/div[1]/table[1]</arg>
 <arg>Reading</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220110 23:53:09.546" level="INFO">Element '//body/div[4]/div[1]/div[1]/div[2]/div[1]/table[1]' contains text 'Reading'.</msg>
-<status status="PASS" starttime="20220110 23:53:09.476" endtime="20220110 23:53:09.546"/>
+<msg timestamp="20220114 01:03:47.960" level="INFO">Element '//body/div[4]/div[1]/div[1]/div[2]/div[1]/table[1]' contains text 'Reading'.</msg>
+<status status="PASS" starttime="20220114 01:03:47.896" endtime="20220114 01:03:47.960"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:09.476" endtime="20220110 23:53:09.547"/>
+<status status="PASS" starttime="20220114 01:03:47.895" endtime="20220114 01:03:47.961"/>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220110 23:53:09.548" endtime="20220110 23:53:11.974"/>
+<status status="PASS" starttime="20220114 01:03:47.962" endtime="20220114 01:03:50.346"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:04.746" endtime="20220110 23:53:11.975"/>
+<status status="PASS" starttime="20220114 01:03:42.620" endtime="20220114 01:03:50.346"/>
 </test>
 <test id="s1-s4-t3" name="Student Can Select Multiple Hobbies">
-<kw name="Go To Website" library="forms_resource" type="SETUP">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Practice Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
 <kw name="Open Browser" library="Selenium2Library">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220110 23:53:11.993" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
-<status status="PASS" starttime="20220110 23:53:11.990" endtime="20220110 23:53:15.712"/>
+<msg timestamp="20220114 01:03:50.366" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:03:50.363" endtime="20220114 01:03:54.163"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:11.986" endtime="20220110 23:53:15.712"/>
+<status status="PASS" starttime="20220114 01:03:50.361" endtime="20220114 01:03:54.164"/>
+</kw>
+<kw name="Go To Practice Page" library="forms_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${practicepage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:03:54.165" level="INFO">Opening url 'https://demoqa.com/automation-practice-form'</msg>
+<status status="PASS" starttime="20220114 01:03:54.165" endtime="20220114 01:03:54.926"/>
+</kw>
+<status status="PASS" starttime="20220114 01:03:54.164" endtime="20220114 01:03:54.927"/>
+</kw>
+<status status="PASS" starttime="20220114 01:03:50.358" endtime="20220114 01:03:54.927"/>
 </kw>
 <kw name="Enter Required Fields" library="forms_resource">
 <kw name="Enter First Name" library="forms_resource">
@@ -913,29 +1101,29 @@
 <arg>//input[@id='firstName']</arg>
 <arg>Allie</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:15.716" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
-<status status="PASS" starttime="20220110 23:53:15.716" endtime="20220110 23:53:16.003"/>
+<msg timestamp="20220114 01:03:54.931" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
+<status status="PASS" starttime="20220114 01:03:54.930" endtime="20220114 01:03:55.243"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:15.715" endtime="20220110 23:53:16.004"/>
+<status status="PASS" starttime="20220114 01:03:54.929" endtime="20220114 01:03:55.243"/>
 </kw>
 <kw name="Enter Last Name" library="forms_resource">
 <kw name="Input Text" library="Selenium2Library">
 <arg>//input[@id='lastName']</arg>
 <arg>Test</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:16.005" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
-<status status="PASS" starttime="20220110 23:53:16.005" endtime="20220110 23:53:16.236"/>
+<msg timestamp="20220114 01:03:55.245" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
+<status status="PASS" starttime="20220114 01:03:55.244" endtime="20220114 01:03:55.383"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:16.004" endtime="20220110 23:53:16.236"/>
+<status status="PASS" starttime="20220114 01:03:55.243" endtime="20220114 01:03:55.384"/>
 </kw>
 <kw name="Select Gender Option" library="forms_resource">
 <kw name="Click Element" library="Selenium2Library">
 <arg>//label[contains(text(),'Female')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:16.238" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
-<status status="PASS" starttime="20220110 23:53:16.237" endtime="20220110 23:53:16.357"/>
+<msg timestamp="20220114 01:03:55.386" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
+<status status="PASS" starttime="20220114 01:03:55.385" endtime="20220114 01:03:55.462"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:16.237" endtime="20220110 23:53:16.357"/>
+<status status="PASS" starttime="20220114 01:03:55.384" endtime="20220114 01:03:55.463"/>
 </kw>
 <kw name="Enter Phone Number" library="forms_resource">
 <arg>9991231234</arg>
@@ -943,73 +1131,89 @@
 <arg>//input[@id='userNumber']</arg>
 <arg>${phone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:16.359" level="INFO">Typing text '9991231234' into text field '//input[@id='userNumber']'.</msg>
-<status status="PASS" starttime="20220110 23:53:16.358" endtime="20220110 23:53:16.504"/>
+<msg timestamp="20220114 01:03:55.464" level="INFO">Typing text '9991231234' into text field '//input[@id='userNumber']'.</msg>
+<status status="PASS" starttime="20220114 01:03:55.464" endtime="20220114 01:03:55.613"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:16.357" endtime="20220110 23:53:16.505"/>
+<status status="PASS" starttime="20220114 01:03:55.463" endtime="20220114 01:03:55.613"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:15.714" endtime="20220110 23:53:16.505"/>
+<status status="PASS" starttime="20220114 01:03:54.928" endtime="20220114 01:03:55.613"/>
 </kw>
 <kw name="Select Hobbies" library="forms_resource">
 <arg>Sports</arg>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//label[contains(text(),'${hobby}')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:16.507" level="INFO">Clicking element '//label[contains(text(),'Sports')]'.</msg>
-<status status="PASS" starttime="20220110 23:53:16.506" endtime="20220110 23:53:16.586"/>
+<msg timestamp="20220114 01:03:55.615" level="INFO">Clicking element '//label[contains(text(),'Sports')]'.</msg>
+<status status="PASS" starttime="20220114 01:03:55.615" endtime="20220114 01:03:55.683"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:16.506" endtime="20220110 23:53:16.586"/>
+<status status="PASS" starttime="20220114 01:03:55.614" endtime="20220114 01:03:55.684"/>
 </kw>
 <kw name="Select Hobbies" library="forms_resource">
 <arg>Music</arg>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//label[contains(text(),'${hobby}')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:16.588" level="INFO">Clicking element '//label[contains(text(),'Music')]'.</msg>
-<status status="PASS" starttime="20220110 23:53:16.588" endtime="20220110 23:53:16.656"/>
+<msg timestamp="20220114 01:03:55.686" level="INFO">Clicking element '//label[contains(text(),'Music')]'.</msg>
+<status status="PASS" starttime="20220114 01:03:55.686" endtime="20220114 01:03:55.750"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:16.587" endtime="20220110 23:53:16.656"/>
+<status status="PASS" starttime="20220114 01:03:55.685" endtime="20220114 01:03:55.751"/>
 </kw>
 <kw name="Click Submit Button" library="forms_resource">
 <kw name="Set Focus To Element" library="Selenium2Library">
 <arg>//button[@id='submit']</arg>
 <doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220110 23:53:16.657" endtime="20220110 23:53:16.690"/>
+<status status="PASS" starttime="20220114 01:03:55.752" endtime="20220114 01:03:55.774"/>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <arg>//button[@id='submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:16.691" level="INFO">Clicking button '//button[@id='submit']'.</msg>
-<status status="PASS" starttime="20220110 23:53:16.690" endtime="20220110 23:53:16.802"/>
+<msg timestamp="20220114 01:03:55.775" level="INFO">Clicking button '//button[@id='submit']'.</msg>
+<status status="PASS" starttime="20220114 01:03:55.774" endtime="20220114 01:03:55.876"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:16.657" endtime="20220110 23:53:16.802"/>
+<status status="PASS" starttime="20220114 01:03:55.751" endtime="20220114 01:03:55.876"/>
 </kw>
 <kw name="Selected Hobbies Should Be on Modal" library="forms_resource">
 <kw name="Element Should Contain" library="Selenium2Library">
 <arg>//body/div[4]/div[1]/div[1]/div[2]/div[1]/table[1]</arg>
 <arg>Sports, Music</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220110 23:53:16.865" level="INFO">Element '//body/div[4]/div[1]/div[1]/div[2]/div[1]/table[1]' contains text 'Sports, Music'.</msg>
-<status status="PASS" starttime="20220110 23:53:16.803" endtime="20220110 23:53:16.865"/>
+<msg timestamp="20220114 01:03:55.938" level="INFO">Element '//body/div[4]/div[1]/div[1]/div[2]/div[1]/table[1]' contains text 'Sports, Music'.</msg>
+<status status="PASS" starttime="20220114 01:03:55.877" endtime="20220114 01:03:55.938"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:16.802" endtime="20220110 23:53:16.865"/>
+<status status="PASS" starttime="20220114 01:03:55.877" endtime="20220114 01:03:55.939"/>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220110 23:53:16.866" endtime="20220110 23:53:19.317"/>
+<status status="PASS" starttime="20220114 01:03:55.941" endtime="20220114 01:03:58.341"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:11.982" endtime="20220110 23:53:19.318"/>
+<status status="PASS" starttime="20220114 01:03:50.354" endtime="20220114 01:03:58.341"/>
 </test>
 <test id="s1-s4-t4" name="Select City Before State">
-<kw name="Go To Website" library="forms_resource" type="SETUP">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Practice Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
 <kw name="Open Browser" library="Selenium2Library">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220110 23:53:19.335" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
-<status status="PASS" starttime="20220110 23:53:19.333" endtime="20220110 23:53:23.168"/>
+<msg timestamp="20220114 01:03:58.351" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:03:58.351" endtime="20220114 01:04:01.952"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:19.330" endtime="20220110 23:53:23.168"/>
+<status status="PASS" starttime="20220114 01:03:58.351" endtime="20220114 01:04:01.952"/>
+</kw>
+<kw name="Go To Practice Page" library="forms_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${practicepage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:04:01.953" level="INFO">Opening url 'https://demoqa.com/automation-practice-form'</msg>
+<status status="PASS" starttime="20220114 01:04:01.952" endtime="20220114 01:04:02.762"/>
+</kw>
+<status status="PASS" starttime="20220114 01:04:01.952" endtime="20220114 01:04:02.763"/>
+</kw>
+<status status="PASS" starttime="20220114 01:03:58.351" endtime="20220114 01:04:02.763"/>
 </kw>
 <kw name="Enter Required Fields" library="forms_resource">
 <kw name="Enter First Name" library="forms_resource">
@@ -1017,29 +1221,29 @@
 <arg>//input[@id='firstName']</arg>
 <arg>Allie</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:23.171" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
-<status status="PASS" starttime="20220110 23:53:23.171" endtime="20220110 23:53:23.372"/>
+<msg timestamp="20220114 01:04:02.766" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
+<status status="PASS" starttime="20220114 01:04:02.765" endtime="20220114 01:04:02.972"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:23.170" endtime="20220110 23:53:23.373"/>
+<status status="PASS" starttime="20220114 01:04:02.765" endtime="20220114 01:04:02.972"/>
 </kw>
 <kw name="Enter Last Name" library="forms_resource">
 <kw name="Input Text" library="Selenium2Library">
 <arg>//input[@id='lastName']</arg>
 <arg>Test</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:23.375" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
-<status status="PASS" starttime="20220110 23:53:23.374" endtime="20220110 23:53:23.756"/>
+<msg timestamp="20220114 01:04:02.974" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
+<status status="PASS" starttime="20220114 01:04:02.973" endtime="20220114 01:04:03.103"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:23.373" endtime="20220110 23:53:23.756"/>
+<status status="PASS" starttime="20220114 01:04:02.973" endtime="20220114 01:04:03.103"/>
 </kw>
 <kw name="Select Gender Option" library="forms_resource">
 <kw name="Click Element" library="Selenium2Library">
 <arg>//label[contains(text(),'Female')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:23.759" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
-<status status="PASS" starttime="20220110 23:53:23.758" endtime="20220110 23:53:23.843"/>
+<msg timestamp="20220114 01:04:03.104" level="INFO">Clicking element '//label[contains(text(),'Female')]'.</msg>
+<status status="PASS" starttime="20220114 01:04:03.104" endtime="20220114 01:04:03.223"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:23.757" endtime="20220110 23:53:23.843"/>
+<status status="PASS" starttime="20220114 01:04:03.103" endtime="20220114 01:04:03.223"/>
 </kw>
 <kw name="Enter Phone Number" library="forms_resource">
 <arg>9991231234</arg>
@@ -1047,57 +1251,73 @@
 <arg>//input[@id='userNumber']</arg>
 <arg>${phone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:23.845" level="INFO">Typing text '9991231234' into text field '//input[@id='userNumber']'.</msg>
-<status status="PASS" starttime="20220110 23:53:23.844" endtime="20220110 23:53:23.967"/>
+<msg timestamp="20220114 01:04:03.225" level="INFO">Typing text '9991231234' into text field '//input[@id='userNumber']'.</msg>
+<status status="PASS" starttime="20220114 01:04:03.224" endtime="20220114 01:04:03.359"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:23.844" endtime="20220110 23:53:23.968"/>
+<status status="PASS" starttime="20220114 01:04:03.223" endtime="20220114 01:04:03.360"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:23.169" endtime="20220110 23:53:23.968"/>
+<status status="PASS" starttime="20220114 01:04:02.764" endtime="20220114 01:04:03.361"/>
 </kw>
 <kw name="Select City Option Should Be Disabled" library="forms_resource">
 <kw name="Element Should Be Disabled" library="Selenium2Library">
 <arg>//input[@id='react-select-4-input']</arg>
 <doc>Verifies that element identified by ``locator`` is disabled.</doc>
-<status status="PASS" starttime="20220110 23:53:23.969" endtime="20220110 23:53:23.995"/>
+<status status="PASS" starttime="20220114 01:04:03.362" endtime="20220114 01:04:03.386"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:23.968" endtime="20220110 23:53:23.995"/>
+<status status="PASS" starttime="20220114 01:04:03.361" endtime="20220114 01:04:03.387"/>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220110 23:53:23.997" endtime="20220110 23:53:26.489"/>
+<status status="PASS" starttime="20220114 01:04:03.388" endtime="20220114 01:04:05.771"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:19.325" endtime="20220110 23:53:26.490"/>
+<status status="PASS" starttime="20220114 01:03:58.349" endtime="20220114 01:04:05.771"/>
 </test>
 <test id="s1-s4-t5" name="Gender Is A Required Field">
-<kw name="Go To Website" library="forms_resource" type="SETUP">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Practice Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
 <kw name="Open Browser" library="Selenium2Library">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220110 23:53:26.507" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
-<status status="PASS" starttime="20220110 23:53:26.504" endtime="20220110 23:53:29.883"/>
+<msg timestamp="20220114 01:04:05.791" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:04:05.788" endtime="20220114 01:04:09.291"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:26.499" endtime="20220110 23:53:29.884"/>
+<status status="PASS" starttime="20220114 01:04:05.785" endtime="20220114 01:04:09.291"/>
+</kw>
+<kw name="Go To Practice Page" library="forms_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${practicepage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:04:09.292" level="INFO">Opening url 'https://demoqa.com/automation-practice-form'</msg>
+<status status="PASS" starttime="20220114 01:04:09.292" endtime="20220114 01:04:10.162"/>
+</kw>
+<status status="PASS" starttime="20220114 01:04:09.291" endtime="20220114 01:04:10.162"/>
+</kw>
+<status status="PASS" starttime="20220114 01:04:05.782" endtime="20220114 01:04:10.162"/>
 </kw>
 <kw name="Enter First Name" library="forms_resource">
 <kw name="Input Text" library="Selenium2Library">
 <arg>//input[@id='firstName']</arg>
 <arg>Allie</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:29.886" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
-<status status="PASS" starttime="20220110 23:53:29.885" endtime="20220110 23:53:30.146"/>
+<msg timestamp="20220114 01:04:10.164" level="INFO">Typing text 'Allie' into text field '//input[@id='firstName']'.</msg>
+<status status="PASS" starttime="20220114 01:04:10.164" endtime="20220114 01:04:10.408"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:29.885" endtime="20220110 23:53:30.146"/>
+<status status="PASS" starttime="20220114 01:04:10.163" endtime="20220114 01:04:10.409"/>
 </kw>
 <kw name="Enter Last Name" library="forms_resource">
 <kw name="Input Text" library="Selenium2Library">
 <arg>//input[@id='lastName']</arg>
 <arg>Test</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:30.149" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
-<status status="PASS" starttime="20220110 23:53:30.148" endtime="20220110 23:53:30.312"/>
+<msg timestamp="20220114 01:04:10.411" level="INFO">Typing text 'Test' into text field '//input[@id='lastName']'.</msg>
+<status status="PASS" starttime="20220114 01:04:10.410" endtime="20220114 01:04:10.553"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:30.147" endtime="20220110 23:53:30.313"/>
+<status status="PASS" starttime="20220114 01:04:10.409" endtime="20220114 01:04:10.554"/>
 </kw>
 <kw name="Enter Phone Number" library="forms_resource">
 <arg>55555512234</arg>
@@ -1105,44 +1325,44 @@
 <arg>//input[@id='userNumber']</arg>
 <arg>${phone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:30.316" level="INFO">Typing text '55555512234' into text field '//input[@id='userNumber']'.</msg>
-<status status="PASS" starttime="20220110 23:53:30.315" endtime="20220110 23:53:30.484"/>
+<msg timestamp="20220114 01:04:10.556" level="INFO">Typing text '55555512234' into text field '//input[@id='userNumber']'.</msg>
+<status status="PASS" starttime="20220114 01:04:10.556" endtime="20220114 01:04:10.690"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:30.313" endtime="20220110 23:53:30.485"/>
+<status status="PASS" starttime="20220114 01:04:10.555" endtime="20220114 01:04:10.691"/>
 </kw>
 <kw name="Click Submit Button" library="forms_resource">
 <kw name="Set Focus To Element" library="Selenium2Library">
 <arg>//button[@id='submit']</arg>
 <doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220110 23:53:30.487" endtime="20220110 23:53:30.517"/>
+<status status="PASS" starttime="20220114 01:04:10.692" endtime="20220114 01:04:10.716"/>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <arg>//button[@id='submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220110 23:53:30.519" level="INFO">Clicking button '//button[@id='submit']'.</msg>
-<status status="PASS" starttime="20220110 23:53:30.518" endtime="20220110 23:53:30.647"/>
+<msg timestamp="20220114 01:04:10.717" level="INFO">Clicking button '//button[@id='submit']'.</msg>
+<status status="PASS" starttime="20220114 01:04:10.716" endtime="20220114 01:04:10.859"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:30.486" endtime="20220110 23:53:30.647"/>
+<status status="PASS" starttime="20220114 01:04:10.691" endtime="20220114 01:04:10.859"/>
 </kw>
 <kw name="Submit Modal Should Not Be Visible" library="forms_resource">
 <kw name="Element Should Not Be Visible" library="Selenium2Library">
 <arg>//div[@id='example-modal-sizes-title-lg']</arg>
 <doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
-<msg timestamp="20220110 23:53:30.675" level="INFO">Element '//div[@id='example-modal-sizes-title-lg']' did not exist.</msg>
-<status status="PASS" starttime="20220110 23:53:30.652" endtime="20220110 23:53:30.676"/>
+<msg timestamp="20220114 01:04:10.899" level="INFO">Element '//div[@id='example-modal-sizes-title-lg']' did not exist.</msg>
+<status status="PASS" starttime="20220114 01:04:10.861" endtime="20220114 01:04:10.899"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:30.651" endtime="20220110 23:53:30.676"/>
+<status status="PASS" starttime="20220114 01:04:10.860" endtime="20220114 01:04:10.899"/>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220110 23:53:30.677" endtime="20220110 23:53:33.043"/>
+<status status="PASS" starttime="20220114 01:04:10.900" endtime="20220114 01:04:13.254"/>
 </kw>
-<status status="PASS" starttime="20220110 23:53:26.496" endtime="20220110 23:53:33.044"/>
+<status status="PASS" starttime="20220114 01:04:05.779" endtime="20220114 01:04:13.254"/>
 </test>
 <doc>A test suite for submitting a student form</doc>
-<status status="PASS" starttime="20220110 23:52:55.204" endtime="20220110 23:53:33.053"/>
+<status status="PASS" starttime="20220114 01:03:31.487" endtime="20220114 01:04:13.256"/>
 </suite>
-<status status="FAIL" starttime="20220110 23:52:17.159" endtime="20220110 23:53:33.081"/>
+<status status="FAIL" starttime="20220114 01:02:33.693" endtime="20220114 01:04:13.264"/>
 </suite>
 <statistics>
 <total>
@@ -1152,11 +1372,11 @@
 <stat pass="0" fail="2" skip="0">fails</stat>
 </tag>
 <suite>
-<stat pass="10" fail="2" skip="0" id="s1" name="Forms">Forms</stat>
-<stat pass="1" fail="1" skip="0" id="s1-s1" name="Datepicker Test">Forms.Datepicker Test</stat>
-<stat pass="3" fail="0" skip="0" id="s1-s2" name="Invalidvalues Test">Forms.Invalidvalues Test</stat>
-<stat pass="1" fail="1" skip="0" id="s1-s3" name="Uploadimage Test">Forms.Uploadimage Test</stat>
-<stat pass="5" fail="0" skip="0" id="s1-s4" name="Validform Tests">Forms.Validform Tests</stat>
+<stat pass="10" fail="2" skip="0" id="s1" name="Forms Testsuite">Forms Testsuite</stat>
+<stat pass="1" fail="1" skip="0" id="s1-s1" name="Datepicker Test">Forms Testsuite.Datepicker Test</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s2" name="Invalidvalues Test">Forms Testsuite.Invalidvalues Test</stat>
+<stat pass="1" fail="1" skip="0" id="s1-s3" name="Uploadimage Test">Forms Testsuite.Uploadimage Test</stat>
+<stat pass="5" fail="0" skip="0" id="s1-s4" name="Validform Tests">Forms Testsuite.Validform Tests</stat>
 </suite>
 </statistics>
 <errors>
