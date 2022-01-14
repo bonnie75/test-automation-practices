@@ -1,0 +1,1511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.8.0 on win32)" generated="20220114 01:08:09.751" rpa="false" schemaversion="2">
+<suite id="s1" name="Widget Testsuite" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\widget_testsuite">
+<suite id="s1-s1" name="Accordian Test" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\widget_testsuite\accordian_test.robot">
+<test id="s1-s1-t1" name="Section One">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Accordian Page</arg>
+<arg>AND</arg>
+<arg>Click Header One</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 01:08:10.147" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:08:10.146" endtime="20220114 01:08:14.303"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:10.146" endtime="20220114 01:08:14.303"/>
+</kw>
+<kw name="Go To Accordian Page" library="widget_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${accordianpage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:08:14.304" level="INFO">Opening url 'https://demoqa.com/accordian'</msg>
+<status status="PASS" starttime="20220114 01:08:14.304" endtime="20220114 01:08:15.070"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:14.303" endtime="20220114 01:08:15.070"/>
+</kw>
+<kw name="Click Header One" library="widget_resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//div[@id='section1Heading']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:15.072" level="INFO">Clicking element '//div[@id='section1Heading']'.</msg>
+<status status="PASS" starttime="20220114 01:08:15.072" endtime="20220114 01:08:15.408"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:15.071" endtime="20220114 01:08:15.409"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:10.145" endtime="20220114 01:08:15.409"/>
+</kw>
+<kw name="Open and Close Accordian">
+<arg>1</arg>
+<arg>Lorem Ipsum is simply dummy</arg>
+<kw name="Click Header" library="widget_resource">
+<arg>${header}</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//div[@id='section${header}Heading']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:15.414" level="INFO">Clicking element '//div[@id='section1Heading']'.</msg>
+<status status="PASS" starttime="20220114 01:08:15.413" endtime="20220114 01:08:15.524"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:15.410" endtime="20220114 01:08:15.525"/>
+</kw>
+<kw name="Content Should Be Visible" library="widget_resource">
+<arg>${text}</arg>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>${text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220114 01:08:15.553" level="INFO">Current page contains text 'Lorem Ipsum is simply dummy'.</msg>
+<status status="PASS" starttime="20220114 01:08:15.526" endtime="20220114 01:08:15.553"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:15.525" endtime="20220114 01:08:15.553"/>
+</kw>
+<kw name="Click Header" library="widget_resource">
+<arg>${header}</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//div[@id='section${header}Heading']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:15.555" level="INFO">Clicking element '//div[@id='section1Heading']'.</msg>
+<status status="PASS" starttime="20220114 01:08:15.555" endtime="20220114 01:08:15.605"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:15.554" endtime="20220114 01:08:15.605"/>
+</kw>
+<kw name="Content Should Not Be Visible" library="widget_resource">
+<arg>${header}</arg>
+<kw name="Wait Until Element Is Not Visible" library="Selenium2Library">
+<arg>//div[@id='section${header}Content']</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220114 01:08:15.606" endtime="20220114 01:08:15.871"/>
+</kw>
+<kw name="Element Should Not Be Visible" library="Selenium2Library">
+<arg>//div[@id='section${header}Content']</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20220114 01:08:15.886" level="INFO">Element '//div[@id='section1Content']' exists but is not displayed.</msg>
+<status status="PASS" starttime="20220114 01:08:15.872" endtime="20220114 01:08:15.886"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:15.605" endtime="20220114 01:08:15.886"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:15.410" endtime="20220114 01:08:15.886"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 01:08:15.886" endtime="20220114 01:08:18.383"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:10.137" endtime="20220114 01:08:18.384"/>
+</test>
+<test id="s1-s1-t2" name="Section Two">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Accordian Page</arg>
+<arg>AND</arg>
+<arg>Click Header One</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 01:08:18.388" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:08:18.387" endtime="20220114 01:08:22.049"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:18.387" endtime="20220114 01:08:22.050"/>
+</kw>
+<kw name="Go To Accordian Page" library="widget_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${accordianpage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:08:22.052" level="INFO">Opening url 'https://demoqa.com/accordian'</msg>
+<status status="PASS" starttime="20220114 01:08:22.051" endtime="20220114 01:08:22.717"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:22.050" endtime="20220114 01:08:22.717"/>
+</kw>
+<kw name="Click Header One" library="widget_resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//div[@id='section1Heading']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:22.719" level="INFO">Clicking element '//div[@id='section1Heading']'.</msg>
+<status status="PASS" starttime="20220114 01:08:22.719" endtime="20220114 01:08:22.801"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:22.718" endtime="20220114 01:08:22.802"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:18.386" endtime="20220114 01:08:22.802"/>
+</kw>
+<kw name="Open and Close Accordian">
+<arg>2</arg>
+<arg>Contrary to popular belief</arg>
+<kw name="Click Header" library="widget_resource">
+<arg>${header}</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//div[@id='section${header}Heading']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:22.811" level="INFO">Clicking element '//div[@id='section2Heading']'.</msg>
+<status status="PASS" starttime="20220114 01:08:22.810" endtime="20220114 01:08:23.004"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:22.809" endtime="20220114 01:08:23.005"/>
+</kw>
+<kw name="Content Should Be Visible" library="widget_resource">
+<arg>${text}</arg>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>${text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220114 01:08:23.093" level="INFO">Current page contains text 'Contrary to popular belief'.</msg>
+<status status="PASS" starttime="20220114 01:08:23.007" endtime="20220114 01:08:23.094"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:23.006" endtime="20220114 01:08:23.094"/>
+</kw>
+<kw name="Click Header" library="widget_resource">
+<arg>${header}</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//div[@id='section${header}Heading']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:23.096" level="INFO">Clicking element '//div[@id='section2Heading']'.</msg>
+<status status="PASS" starttime="20220114 01:08:23.096" endtime="20220114 01:08:23.268"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:23.095" endtime="20220114 01:08:23.269"/>
+</kw>
+<kw name="Content Should Not Be Visible" library="widget_resource">
+<arg>${header}</arg>
+<kw name="Wait Until Element Is Not Visible" library="Selenium2Library">
+<arg>//div[@id='section${header}Content']</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220114 01:08:23.270" endtime="20220114 01:08:23.572"/>
+</kw>
+<kw name="Element Should Not Be Visible" library="Selenium2Library">
+<arg>//div[@id='section${header}Content']</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20220114 01:08:23.634" level="INFO">Element '//div[@id='section2Content']' exists but is not displayed.</msg>
+<status status="PASS" starttime="20220114 01:08:23.588" endtime="20220114 01:08:23.634"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:23.269" endtime="20220114 01:08:23.634"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:22.808" endtime="20220114 01:08:23.634"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 01:08:23.634" endtime="20220114 01:08:25.994"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:18.385" endtime="20220114 01:08:25.994"/>
+</test>
+<test id="s1-s1-t3" name="Section Three">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Accordian Page</arg>
+<arg>AND</arg>
+<arg>Click Header One</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 01:08:26.013" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:08:26.011" endtime="20220114 01:08:30.001"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:26.008" endtime="20220114 01:08:30.001"/>
+</kw>
+<kw name="Go To Accordian Page" library="widget_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${accordianpage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:08:30.002" level="INFO">Opening url 'https://demoqa.com/accordian'</msg>
+<status status="PASS" starttime="20220114 01:08:30.002" endtime="20220114 01:08:30.765"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:30.001" endtime="20220114 01:08:30.765"/>
+</kw>
+<kw name="Click Header One" library="widget_resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//div[@id='section1Heading']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:30.768" level="INFO">Clicking element '//div[@id='section1Heading']'.</msg>
+<status status="PASS" starttime="20220114 01:08:30.767" endtime="20220114 01:08:30.890"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:30.766" endtime="20220114 01:08:30.890"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:26.005" endtime="20220114 01:08:30.890"/>
+</kw>
+<kw name="Open and Close Accordian">
+<arg>3</arg>
+<arg>It is a long established</arg>
+<kw name="Click Header" library="widget_resource">
+<arg>${header}</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//div[@id='section${header}Heading']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:30.909" level="INFO">Clicking element '//div[@id='section3Heading']'.</msg>
+<status status="PASS" starttime="20220114 01:08:30.909" endtime="20220114 01:08:31.022"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:30.907" endtime="20220114 01:08:31.023"/>
+</kw>
+<kw name="Content Should Be Visible" library="widget_resource">
+<arg>${text}</arg>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>${text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220114 01:08:31.045" level="INFO">Current page contains text 'It is a long established'.</msg>
+<status status="PASS" starttime="20220114 01:08:31.024" endtime="20220114 01:08:31.046"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:31.023" endtime="20220114 01:08:31.046"/>
+</kw>
+<kw name="Click Header" library="widget_resource">
+<arg>${header}</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//div[@id='section${header}Heading']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:31.050" level="INFO">Clicking element '//div[@id='section3Heading']'.</msg>
+<status status="PASS" starttime="20220114 01:08:31.049" endtime="20220114 01:08:31.107"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:31.047" endtime="20220114 01:08:31.107"/>
+</kw>
+<kw name="Content Should Not Be Visible" library="widget_resource">
+<arg>${header}</arg>
+<kw name="Wait Until Element Is Not Visible" library="Selenium2Library">
+<arg>//div[@id='section${header}Content']</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220114 01:08:31.108" endtime="20220114 01:08:31.381"/>
+</kw>
+<kw name="Element Should Not Be Visible" library="Selenium2Library">
+<arg>//div[@id='section${header}Content']</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20220114 01:08:31.402" level="INFO">Element '//div[@id='section3Content']' exists but is not displayed.</msg>
+<status status="PASS" starttime="20220114 01:08:31.382" endtime="20220114 01:08:31.402"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:31.107" endtime="20220114 01:08:31.402"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:30.906" endtime="20220114 01:08:31.402"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 01:08:31.403" endtime="20220114 01:08:33.767"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:26.002" endtime="20220114 01:08:33.767"/>
+</test>
+<doc>A test for opening and closing the accordian</doc>
+<status status="PASS" starttime="20220114 01:08:09.800" endtime="20220114 01:08:33.778"/>
+</suite>
+<suite id="s1-s2" name="Autocomplete Test" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\widget_testsuite\autocomplete_test.robot">
+<test id="s1-s2-t1" name="Type Multiple Colour Names">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Autocomplete Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 01:08:33.825" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:08:33.824" endtime="20220114 01:08:37.742"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:33.824" endtime="20220114 01:08:37.742"/>
+</kw>
+<kw name="Go To Autocomplete Page" library="widget_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${autocompletepage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:08:37.743" level="INFO">Opening url 'https://demoqa.com/auto-complete'</msg>
+<status status="PASS" starttime="20220114 01:08:37.743" endtime="20220114 01:08:38.763"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:37.742" endtime="20220114 01:08:38.764"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:33.823" endtime="20220114 01:08:38.764"/>
+</kw>
+<kw name="Click Multiple Colour Field" library="widget_resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//div[@id='autoCompleteMultipleContainer']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:38.768" level="INFO">Clicking element '//div[@id='autoCompleteMultipleContainer']'.</msg>
+<status status="PASS" starttime="20220114 01:08:38.767" endtime="20220114 01:08:38.876"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:38.766" endtime="20220114 01:08:38.876"/>
+</kw>
+<for flavor="IN">
+<var>${colour}</var>
+<value>@{COLOR}</value>
+<iter>
+<var name="${colour}">Blue</var>
+<kw name="Enter Colour" library="widget_resource">
+<arg>${colour}</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>${colour}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:38.893" level="INFO">Typing text 'Blue' into text field '//input[@id='autoCompleteMultipleInput']'.</msg>
+<status status="PASS" starttime="20220114 01:08:38.893" endtime="20220114 01:08:39.143"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220114 01:08:39.144" level="INFO">Sending key(s) ('TAB',) to //input[@id='autoCompleteMultipleInput'] element.</msg>
+<msg timestamp="20220114 01:08:39.458" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20220114 01:08:39.459" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20220114 01:08:39.143" endtime="20220114 01:08:39.486"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:38.892" endtime="20220114 01:08:39.486"/>
+</kw>
+<kw name="Colour Is Listed in Field" library="widget_resource">
+<arg>${colour}</arg>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>//div[contains(text(),'${colour}')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220114 01:08:39.523" level="INFO">Element '//div[contains(text(),'Blue')]' is displayed.</msg>
+<status status="PASS" starttime="20220114 01:08:39.488" endtime="20220114 01:08:39.523"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:39.487" endtime="20220114 01:08:39.523"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:38.891" endtime="20220114 01:08:39.523"/>
+</iter>
+<iter>
+<var name="${colour}">Red</var>
+<kw name="Enter Colour" library="widget_resource">
+<arg>${colour}</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>${colour}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:39.523" level="INFO">Typing text 'Red' into text field '//input[@id='autoCompleteMultipleInput']'.</msg>
+<status status="PASS" starttime="20220114 01:08:39.523" endtime="20220114 01:08:39.648"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220114 01:08:39.649" level="INFO">Sending key(s) ('TAB',) to //input[@id='autoCompleteMultipleInput'] element.</msg>
+<msg timestamp="20220114 01:08:39.944" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20220114 01:08:39.945" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20220114 01:08:39.648" endtime="20220114 01:08:39.981"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:39.523" endtime="20220114 01:08:39.981"/>
+</kw>
+<kw name="Colour Is Listed in Field" library="widget_resource">
+<arg>${colour}</arg>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>//div[contains(text(),'${colour}')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220114 01:08:40.018" level="INFO">Element '//div[contains(text(),'Red')]' is displayed.</msg>
+<status status="PASS" starttime="20220114 01:08:39.983" endtime="20220114 01:08:40.018"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:39.982" endtime="20220114 01:08:40.019"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:39.523" endtime="20220114 01:08:40.019"/>
+</iter>
+<iter>
+<var name="${colour}">Yellow</var>
+<kw name="Enter Colour" library="widget_resource">
+<arg>${colour}</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>${colour}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:40.020" level="INFO">Typing text 'Yellow' into text field '//input[@id='autoCompleteMultipleInput']'.</msg>
+<status status="PASS" starttime="20220114 01:08:40.020" endtime="20220114 01:08:40.111"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220114 01:08:40.112" level="INFO">Sending key(s) ('TAB',) to //input[@id='autoCompleteMultipleInput'] element.</msg>
+<msg timestamp="20220114 01:08:40.407" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20220114 01:08:40.408" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20220114 01:08:40.112" endtime="20220114 01:08:40.431"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:40.019" endtime="20220114 01:08:40.431"/>
+</kw>
+<kw name="Colour Is Listed in Field" library="widget_resource">
+<arg>${colour}</arg>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>//div[contains(text(),'${colour}')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220114 01:08:40.478" level="INFO">Element '//div[contains(text(),'Yellow')]' is displayed.</msg>
+<status status="PASS" starttime="20220114 01:08:40.432" endtime="20220114 01:08:40.479"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:40.431" endtime="20220114 01:08:40.479"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:40.019" endtime="20220114 01:08:40.479"/>
+</iter>
+<status status="PASS" starttime="20220114 01:08:38.890" endtime="20220114 01:08:40.479"/>
+</for>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 01:08:40.481" endtime="20220114 01:08:42.811"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:33.822" endtime="20220114 01:08:42.811"/>
+</test>
+<test id="s1-s2-t2" name="Remove One Colour From Multiple List">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Autocomplete Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 01:08:42.829" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:08:42.828" endtime="20220114 01:08:46.550"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:42.825" endtime="20220114 01:08:46.551"/>
+</kw>
+<kw name="Go To Autocomplete Page" library="widget_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${autocompletepage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:08:46.552" level="INFO">Opening url 'https://demoqa.com/auto-complete'</msg>
+<status status="PASS" starttime="20220114 01:08:46.551" endtime="20220114 01:08:47.515"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:46.551" endtime="20220114 01:08:47.517"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:42.823" endtime="20220114 01:08:47.517"/>
+</kw>
+<kw name="Add Multiple Colours To Field" library="widget_resource">
+<kw name="Click Multiple Colour Field" library="widget_resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//div[@id='autoCompleteMultipleContainer']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:47.526" level="INFO">Clicking element '//div[@id='autoCompleteMultipleContainer']'.</msg>
+<status status="PASS" starttime="20220114 01:08:47.524" endtime="20220114 01:08:47.750"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:47.522" endtime="20220114 01:08:47.751"/>
+</kw>
+<for flavor="IN">
+<var>${colour}</var>
+<value>@{COLOR}</value>
+<iter>
+<var name="${colour}">Blue</var>
+<kw name="Enter Colour" library="widget_resource">
+<arg>${colour}</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>${colour}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:47.754" level="INFO">Typing text 'Blue' into text field '//input[@id='autoCompleteMultipleInput']'.</msg>
+<status status="PASS" starttime="20220114 01:08:47.753" endtime="20220114 01:08:47.908"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220114 01:08:47.910" level="INFO">Sending key(s) ('TAB',) to //input[@id='autoCompleteMultipleInput'] element.</msg>
+<msg timestamp="20220114 01:08:48.209" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20220114 01:08:48.209" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20220114 01:08:47.909" endtime="20220114 01:08:48.271"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:47.752" endtime="20220114 01:08:48.272"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:47.751" endtime="20220114 01:08:48.272"/>
+</iter>
+<iter>
+<var name="${colour}">Red</var>
+<kw name="Enter Colour" library="widget_resource">
+<arg>${colour}</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>${colour}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:48.276" level="INFO">Typing text 'Red' into text field '//input[@id='autoCompleteMultipleInput']'.</msg>
+<status status="PASS" starttime="20220114 01:08:48.275" endtime="20220114 01:08:48.385"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220114 01:08:48.386" level="INFO">Sending key(s) ('TAB',) to //input[@id='autoCompleteMultipleInput'] element.</msg>
+<msg timestamp="20220114 01:08:48.681" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20220114 01:08:48.682" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20220114 01:08:48.386" endtime="20220114 01:08:48.707"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:48.273" endtime="20220114 01:08:48.708"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:48.272" endtime="20220114 01:08:48.708"/>
+</iter>
+<iter>
+<var name="${colour}">Yellow</var>
+<kw name="Enter Colour" library="widget_resource">
+<arg>${colour}</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>${colour}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:48.711" level="INFO">Typing text 'Yellow' into text field '//input[@id='autoCompleteMultipleInput']'.</msg>
+<status status="PASS" starttime="20220114 01:08:48.710" endtime="20220114 01:08:48.805"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220114 01:08:48.807" level="INFO">Sending key(s) ('TAB',) to //input[@id='autoCompleteMultipleInput'] element.</msg>
+<msg timestamp="20220114 01:08:49.096" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20220114 01:08:49.097" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20220114 01:08:48.806" endtime="20220114 01:08:49.126"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:48.709" endtime="20220114 01:08:49.127"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:48.708" endtime="20220114 01:08:49.127"/>
+</iter>
+<status status="PASS" starttime="20220114 01:08:47.751" endtime="20220114 01:08:49.127"/>
+</for>
+<status status="PASS" starttime="20220114 01:08:47.520" endtime="20220114 01:08:49.128"/>
+</kw>
+<kw name="Click Remove Colour Button" library="widget_resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:49.136" level="INFO">Clicking element '//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]'.</msg>
+<status status="PASS" starttime="20220114 01:08:49.133" endtime="20220114 01:08:49.213"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:49.130" endtime="20220114 01:08:49.213"/>
+</kw>
+<kw name="Colour Is Not Listed in Field" library="widget_resource">
+<arg>Red</arg>
+<kw name="Element Should Not Be Visible" library="Selenium2Library">
+<arg>//div[contains(text(),'${colour}')]</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20220114 01:08:49.240" level="INFO">Element '//div[contains(text(),'Red')]' did not exist.</msg>
+<status status="PASS" starttime="20220114 01:08:49.222" endtime="20220114 01:08:49.240"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:49.213" endtime="20220114 01:08:49.241"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 01:08:49.242" endtime="20220114 01:08:51.553"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:42.819" endtime="20220114 01:08:51.553"/>
+</test>
+<test id="s1-s2-t3" name="Clear Multiple Colours">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Autocomplete Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 01:08:51.561" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:08:51.561" endtime="20220114 01:08:55.345"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:51.561" endtime="20220114 01:08:55.345"/>
+</kw>
+<kw name="Go To Autocomplete Page" library="widget_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${autocompletepage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:08:55.346" level="INFO">Opening url 'https://demoqa.com/auto-complete'</msg>
+<status status="PASS" starttime="20220114 01:08:55.346" endtime="20220114 01:08:56.453"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:55.345" endtime="20220114 01:08:56.454"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:51.561" endtime="20220114 01:08:56.455"/>
+</kw>
+<kw name="Add Multiple Colours To Field" library="widget_resource">
+<kw name="Click Multiple Colour Field" library="widget_resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//div[@id='autoCompleteMultipleContainer']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:56.461" level="INFO">Clicking element '//div[@id='autoCompleteMultipleContainer']'.</msg>
+<status status="PASS" starttime="20220114 01:08:56.460" endtime="20220114 01:08:56.652"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:56.458" endtime="20220114 01:08:56.653"/>
+</kw>
+<for flavor="IN">
+<var>${colour}</var>
+<value>@{COLOR}</value>
+<iter>
+<var name="${colour}">Blue</var>
+<kw name="Enter Colour" library="widget_resource">
+<arg>${colour}</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>${colour}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:56.656" level="INFO">Typing text 'Blue' into text field '//input[@id='autoCompleteMultipleInput']'.</msg>
+<status status="PASS" starttime="20220114 01:08:56.655" endtime="20220114 01:08:56.799"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220114 01:08:56.800" level="INFO">Sending key(s) ('TAB',) to //input[@id='autoCompleteMultipleInput'] element.</msg>
+<msg timestamp="20220114 01:08:57.108" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20220114 01:08:57.109" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20220114 01:08:56.799" endtime="20220114 01:08:57.167"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:56.654" endtime="20220114 01:08:57.167"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:56.653" endtime="20220114 01:08:57.167"/>
+</iter>
+<iter>
+<var name="${colour}">Red</var>
+<kw name="Enter Colour" library="widget_resource">
+<arg>${colour}</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>${colour}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:57.171" level="INFO">Typing text 'Red' into text field '//input[@id='autoCompleteMultipleInput']'.</msg>
+<status status="PASS" starttime="20220114 01:08:57.170" endtime="20220114 01:08:57.290"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220114 01:08:57.290" level="INFO">Sending key(s) ('TAB',) to //input[@id='autoCompleteMultipleInput'] element.</msg>
+<msg timestamp="20220114 01:08:57.597" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20220114 01:08:57.598" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20220114 01:08:57.290" endtime="20220114 01:08:57.633"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:57.168" endtime="20220114 01:08:57.633"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:57.168" endtime="20220114 01:08:57.634"/>
+</iter>
+<iter>
+<var name="${colour}">Yellow</var>
+<kw name="Enter Colour" library="widget_resource">
+<arg>${colour}</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>${colour}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:57.638" level="INFO">Typing text 'Yellow' into text field '//input[@id='autoCompleteMultipleInput']'.</msg>
+<status status="PASS" starttime="20220114 01:08:57.636" endtime="20220114 01:08:57.761"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220114 01:08:57.763" level="INFO">Sending key(s) ('TAB',) to //input[@id='autoCompleteMultipleInput'] element.</msg>
+<msg timestamp="20220114 01:08:58.055" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20220114 01:08:58.055" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20220114 01:08:57.762" endtime="20220114 01:08:58.079"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:57.634" endtime="20220114 01:08:58.079"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:57.634" endtime="20220114 01:08:58.079"/>
+</iter>
+<status status="PASS" starttime="20220114 01:08:56.653" endtime="20220114 01:08:58.079"/>
+</for>
+<status status="PASS" starttime="20220114 01:08:56.456" endtime="20220114 01:08:58.080"/>
+</kw>
+<kw name="Click Clear Field Button" library="widget_resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220114 01:08:58.083" level="INFO">Clicking element '//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]'.</msg>
+<status status="PASS" starttime="20220114 01:08:58.082" endtime="20220114 01:08:58.147"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:58.081" endtime="20220114 01:08:58.147"/>
+</kw>
+<kw name="Multiple Colour Field Should Be Empty" library="widget_resource">
+<kw name="Element Should Contain" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>${EMPTY}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220114 01:08:58.176" level="INFO">Element '//input[@id='autoCompleteMultipleInput']' contains text ''.</msg>
+<status status="PASS" starttime="20220114 01:08:58.149" endtime="20220114 01:08:58.176"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:58.148" endtime="20220114 01:08:58.177"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 01:08:58.178" endtime="20220114 01:09:00.494"/>
+</kw>
+<status status="PASS" starttime="20220114 01:08:51.561" endtime="20220114 01:09:00.494"/>
+</test>
+<test id="s1-s2-t4" name="Cannot Enter Non-existing Colour in Multiple Field">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Autocomplete Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 01:09:00.502" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:09:00.502" endtime="20220114 01:09:04.151"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:00.502" endtime="20220114 01:09:04.151"/>
+</kw>
+<kw name="Go To Autocomplete Page" library="widget_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${autocompletepage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:09:04.152" level="INFO">Opening url 'https://demoqa.com/auto-complete'</msg>
+<status status="PASS" starttime="20220114 01:09:04.152" endtime="20220114 01:09:05.176"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:04.151" endtime="20220114 01:09:05.176"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:00.502" endtime="20220114 01:09:05.176"/>
+</kw>
+<kw name="Click Multiple Colour Field" library="widget_resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//div[@id='autoCompleteMultipleContainer']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220114 01:09:05.178" level="INFO">Clicking element '//div[@id='autoCompleteMultipleContainer']'.</msg>
+<status status="PASS" starttime="20220114 01:09:05.178" endtime="20220114 01:09:05.358"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:05.177" endtime="20220114 01:09:05.359"/>
+</kw>
+<kw name="Enter Colour" library="widget_resource">
+<arg>Brown</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>${colour}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220114 01:09:05.372" level="INFO">Typing text 'Brown' into text field '//input[@id='autoCompleteMultipleInput']'.</msg>
+<status status="PASS" starttime="20220114 01:09:05.372" endtime="20220114 01:09:05.529"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220114 01:09:05.530" level="INFO">Sending key(s) ('TAB',) to //input[@id='autoCompleteMultipleInput'] element.</msg>
+<msg timestamp="20220114 01:09:05.835" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20220114 01:09:05.836" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20220114 01:09:05.529" endtime="20220114 01:09:05.858"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:05.371" endtime="20220114 01:09:05.858"/>
+</kw>
+<kw name="Multiple Colour Field Should Be Empty" library="widget_resource">
+<kw name="Element Should Contain" library="Selenium2Library">
+<arg>//input[@id='autoCompleteMultipleInput']</arg>
+<arg>${EMPTY}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220114 01:09:05.896" level="INFO">Element '//input[@id='autoCompleteMultipleInput']' contains text ''.</msg>
+<status status="PASS" starttime="20220114 01:09:05.860" endtime="20220114 01:09:05.897"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:05.859" endtime="20220114 01:09:05.897"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 01:09:05.900" endtime="20220114 01:09:08.266"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:00.502" endtime="20220114 01:09:08.266"/>
+</test>
+<test id="s1-s2-t5" name="Type Single Colour Name">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Autocomplete Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 01:09:08.286" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:09:08.283" endtime="20220114 01:09:11.932"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:08.281" endtime="20220114 01:09:11.933"/>
+</kw>
+<kw name="Go To Autocomplete Page" library="widget_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${autocompletepage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:09:11.934" level="INFO">Opening url 'https://demoqa.com/auto-complete'</msg>
+<status status="PASS" starttime="20220114 01:09:11.933" endtime="20220114 01:09:13.033"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:11.933" endtime="20220114 01:09:13.034"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:08.279" endtime="20220114 01:09:13.035"/>
+</kw>
+<kw name="Click Single Colour Field" library="widget_resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//div[@id='autoCompleteSingleContainer']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220114 01:09:13.038" level="INFO">Clicking element '//div[@id='autoCompleteSingleContainer']'.</msg>
+<status status="PASS" starttime="20220114 01:09:13.037" endtime="20220114 01:09:13.124"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:13.036" endtime="20220114 01:09:13.124"/>
+</kw>
+<kw name="Enter Single Colour" library="widget_resource">
+<arg>Blue</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>//input[@id='autoCompleteSingleInput']</arg>
+<arg>${colour}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220114 01:09:13.149" level="INFO">Typing text 'Blue' into text field '//input[@id='autoCompleteSingleInput']'.</msg>
+<status status="PASS" starttime="20220114 01:09:13.148" endtime="20220114 01:09:13.363"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>//input[@id='autoCompleteSingleInput']</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220114 01:09:13.365" level="INFO">Sending key(s) ('TAB',) to //input[@id='autoCompleteSingleInput'] element.</msg>
+<msg timestamp="20220114 01:09:13.700" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20220114 01:09:13.700" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20220114 01:09:13.364" endtime="20220114 01:09:13.716"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:13.147" endtime="20220114 01:09:13.717"/>
+</kw>
+<kw name="Colour Is Listed in Field" library="widget_resource">
+<arg>Blue</arg>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>//div[contains(text(),'${colour}')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220114 01:09:13.762" level="INFO">Element '//div[contains(text(),'Blue')]' is displayed.</msg>
+<status status="PASS" starttime="20220114 01:09:13.728" endtime="20220114 01:09:13.762"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:13.727" endtime="20220114 01:09:13.763"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 01:09:13.764" endtime="20220114 01:09:16.094"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:08.274" endtime="20220114 01:09:16.094"/>
+</test>
+<test id="s1-s2-t6" name="Cannot Type Multiple Colours In Single Field">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Autocomplete Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 01:09:16.116" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:09:16.114" endtime="20220114 01:09:19.542"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:16.111" endtime="20220114 01:09:19.543"/>
+</kw>
+<kw name="Go To Autocomplete Page" library="widget_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${autocompletepage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:09:19.544" level="INFO">Opening url 'https://demoqa.com/auto-complete'</msg>
+<status status="PASS" starttime="20220114 01:09:19.543" endtime="20220114 01:09:20.687"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:19.543" endtime="20220114 01:09:20.688"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:16.108" endtime="20220114 01:09:20.689"/>
+</kw>
+<kw name="Click Single Colour Field" library="widget_resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//div[@id='autoCompleteSingleContainer']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220114 01:09:20.691" level="INFO">Clicking element '//div[@id='autoCompleteSingleContainer']'.</msg>
+<status status="PASS" starttime="20220114 01:09:20.690" endtime="20220114 01:09:20.823"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:20.690" endtime="20220114 01:09:20.823"/>
+</kw>
+<kw name="Enter Single Colour" library="widget_resource">
+<arg>Blue</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>//input[@id='autoCompleteSingleInput']</arg>
+<arg>${colour}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220114 01:09:20.827" level="INFO">Typing text 'Blue' into text field '//input[@id='autoCompleteSingleInput']'.</msg>
+<status status="PASS" starttime="20220114 01:09:20.826" endtime="20220114 01:09:21.078"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>//input[@id='autoCompleteSingleInput']</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220114 01:09:21.080" level="INFO">Sending key(s) ('TAB',) to //input[@id='autoCompleteSingleInput'] element.</msg>
+<msg timestamp="20220114 01:09:21.384" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20220114 01:09:21.384" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20220114 01:09:21.079" endtime="20220114 01:09:21.408"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:20.825" endtime="20220114 01:09:21.408"/>
+</kw>
+<kw name="Enter Single Colour" library="widget_resource">
+<arg>Red</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>//input[@id='autoCompleteSingleInput']</arg>
+<arg>${colour}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220114 01:09:21.410" level="INFO">Typing text 'Red' into text field '//input[@id='autoCompleteSingleInput']'.</msg>
+<status status="PASS" starttime="20220114 01:09:21.409" endtime="20220114 01:09:21.489"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>//input[@id='autoCompleteSingleInput']</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220114 01:09:21.490" level="INFO">Sending key(s) ('TAB',) to //input[@id='autoCompleteSingleInput'] element.</msg>
+<msg timestamp="20220114 01:09:21.781" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20220114 01:09:21.781" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20220114 01:09:21.489" endtime="20220114 01:09:21.800"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:21.409" endtime="20220114 01:09:21.800"/>
+</kw>
+<kw name="Colour Is Not Listed in Field" library="widget_resource">
+<arg>Blue</arg>
+<kw name="Element Should Not Be Visible" library="Selenium2Library">
+<arg>//div[contains(text(),'${colour}')]</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20220114 01:09:21.828" level="INFO">Element '//div[contains(text(),'Blue')]' did not exist.</msg>
+<status status="PASS" starttime="20220114 01:09:21.802" endtime="20220114 01:09:21.828"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:21.801" endtime="20220114 01:09:21.829"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 01:09:21.830" endtime="20220114 01:09:24.183"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:16.103" endtime="20220114 01:09:24.183"/>
+</test>
+<test id="s1-s2-t7" name="Cannot Clear From Single Field">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Autocomplete Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 01:09:24.204" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:09:24.202" endtime="20220114 01:09:27.847"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:24.201" endtime="20220114 01:09:27.847"/>
+</kw>
+<kw name="Go To Autocomplete Page" library="widget_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${autocompletepage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:09:27.848" level="INFO">Opening url 'https://demoqa.com/auto-complete'</msg>
+<status status="PASS" starttime="20220114 01:09:27.848" endtime="20220114 01:09:28.843"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:27.847" endtime="20220114 01:09:28.844"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:24.197" endtime="20220114 01:09:28.844"/>
+</kw>
+<kw name="Click Single Colour Field" library="widget_resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//div[@id='autoCompleteSingleContainer']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220114 01:09:28.846" level="INFO">Clicking element '//div[@id='autoCompleteSingleContainer']'.</msg>
+<status status="PASS" starttime="20220114 01:09:28.845" endtime="20220114 01:09:29.060"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:28.845" endtime="20220114 01:09:29.060"/>
+</kw>
+<kw name="Enter Single Colour" library="widget_resource">
+<arg>Yellow</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>//input[@id='autoCompleteSingleInput']</arg>
+<arg>${colour}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220114 01:09:29.063" level="INFO">Typing text 'Yellow' into text field '//input[@id='autoCompleteSingleInput']'.</msg>
+<status status="PASS" starttime="20220114 01:09:29.062" endtime="20220114 01:09:29.218"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>//input[@id='autoCompleteSingleInput']</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220114 01:09:29.220" level="INFO">Sending key(s) ('TAB',) to //input[@id='autoCompleteSingleInput'] element.</msg>
+<msg timestamp="20220114 01:09:29.524" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20220114 01:09:29.525" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20220114 01:09:29.218" endtime="20220114 01:09:29.556"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:29.061" endtime="20220114 01:09:29.557"/>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<arg>//input[@id='autoCompleteSingleInput']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220114 01:09:29.560" endtime="20220114 01:09:29.617"/>
+</kw>
+<kw name="Single Colour Field Should Not Be Empty" library="widget_resource">
+<kw name="Element Should Contain" library="Selenium2Library">
+<arg>//div[contains(text(),'Yellow')]</arg>
+<arg>Yellow</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220114 01:09:29.655" level="INFO">Element '//div[contains(text(),'Yellow')]' contains text 'Yellow'.</msg>
+<status status="PASS" starttime="20220114 01:09:29.619" endtime="20220114 01:09:29.655"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:29.618" endtime="20220114 01:09:29.656"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 01:09:29.657" endtime="20220114 01:09:31.995"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:24.192" endtime="20220114 01:09:31.995"/>
+</test>
+<test id="s1-s2-t8" name="Cannot Enter Non-existing Colour in Single Field">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Autocomplete Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 01:09:32.002" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:09:32.001" endtime="20220114 01:09:35.797"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:32.000" endtime="20220114 01:09:35.797"/>
+</kw>
+<kw name="Go To Autocomplete Page" library="widget_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${autocompletepage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:09:35.798" level="INFO">Opening url 'https://demoqa.com/auto-complete'</msg>
+<status status="PASS" starttime="20220114 01:09:35.798" endtime="20220114 01:09:36.871"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:35.798" endtime="20220114 01:09:36.872"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:31.999" endtime="20220114 01:09:36.872"/>
+</kw>
+<kw name="Click Single Colour Field" library="widget_resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//div[@id='autoCompleteSingleContainer']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220114 01:09:36.875" level="INFO">Clicking element '//div[@id='autoCompleteSingleContainer']'.</msg>
+<status status="PASS" starttime="20220114 01:09:36.874" endtime="20220114 01:09:37.058"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:36.873" endtime="20220114 01:09:37.059"/>
+</kw>
+<kw name="Enter Single Colour" library="widget_resource">
+<arg>Brown</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>//input[@id='autoCompleteSingleInput']</arg>
+<arg>${colour}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220114 01:09:37.061" level="INFO">Typing text 'Brown' into text field '//input[@id='autoCompleteSingleInput']'.</msg>
+<status status="PASS" starttime="20220114 01:09:37.060" endtime="20220114 01:09:37.218"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>//input[@id='autoCompleteSingleInput']</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220114 01:09:37.219" level="INFO">Sending key(s) ('TAB',) to //input[@id='autoCompleteSingleInput'] element.</msg>
+<msg timestamp="20220114 01:09:37.522" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20220114 01:09:37.522" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20220114 01:09:37.218" endtime="20220114 01:09:37.561"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:37.059" endtime="20220114 01:09:37.562"/>
+</kw>
+<kw name="Single Colour Field Should Be Empty" library="widget_resource">
+<kw name="Element Should Contain" library="Selenium2Library">
+<arg>//input[@id='autoCompleteSingleInput']</arg>
+<arg>${EMPTY}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220114 01:09:37.606" level="INFO">Element '//input[@id='autoCompleteSingleInput']' contains text ''.</msg>
+<status status="PASS" starttime="20220114 01:09:37.563" endtime="20220114 01:09:37.606"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:37.563" endtime="20220114 01:09:37.607"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 01:09:37.608" endtime="20220114 01:09:39.938"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:31.998" endtime="20220114 01:09:39.938"/>
+</test>
+<doc>A test for opening and closing the accordian</doc>
+<status status="PASS" starttime="20220114 01:08:33.794" endtime="20220114 01:09:39.946"/>
+</suite>
+<suite id="s1-s3" name="Tabs Test" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\widget_testsuite\tabs_test.robot">
+<test id="s1-s3-t1" name="Click What Tab">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Tabs Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 01:09:39.984" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:09:39.984" endtime="20220114 01:09:43.663"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:39.984" endtime="20220114 01:09:43.663"/>
+</kw>
+<kw name="Go To Tabs Page" library="widget_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${tabspage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:09:43.664" level="INFO">Opening url 'https://demoqa.com/tabs'</msg>
+<status status="PASS" starttime="20220114 01:09:43.664" endtime="20220114 01:09:44.353"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:43.663" endtime="20220114 01:09:44.353"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:39.984" endtime="20220114 01:09:44.353"/>
+</kw>
+<kw name="Click Tab" library="widget_resource">
+<arg>what</arg>
+<kw name="Click Link" library="Selenium2Library">
+<arg>//a[@id='demo-tab-${tab}']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220114 01:09:44.356" level="INFO">Clicking link '//a[@id='demo-tab-what']'.</msg>
+<status status="PASS" starttime="20220114 01:09:44.355" endtime="20220114 01:09:44.489"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:44.354" endtime="20220114 01:09:44.489"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>//p[contains(text(),'Lorem Ipsum is simply dummy text of the printing a')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220114 01:09:44.719" level="INFO">Element '//p[contains(text(),'Lorem Ipsum is simply dummy text of the printing a')]' is displayed.</msg>
+<status status="PASS" starttime="20220114 01:09:44.490" endtime="20220114 01:09:44.719"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 01:09:44.720" endtime="20220114 01:09:47.126"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:39.969" endtime="20220114 01:09:47.126"/>
+</test>
+<test id="s1-s3-t2" name="Click Origin Tab">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Tabs Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 01:09:47.126" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:09:47.126" endtime="20220114 01:09:50.729"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:47.126" endtime="20220114 01:09:50.730"/>
+</kw>
+<kw name="Go To Tabs Page" library="widget_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${tabspage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:09:50.731" level="INFO">Opening url 'https://demoqa.com/tabs'</msg>
+<status status="PASS" starttime="20220114 01:09:50.730" endtime="20220114 01:09:51.429"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:50.730" endtime="20220114 01:09:51.429"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:47.126" endtime="20220114 01:09:51.429"/>
+</kw>
+<kw name="Click Tab" library="widget_resource">
+<arg>origin</arg>
+<kw name="Click Link" library="Selenium2Library">
+<arg>//a[@id='demo-tab-${tab}']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220114 01:09:51.433" level="INFO">Clicking link '//a[@id='demo-tab-origin']'.</msg>
+<status status="PASS" starttime="20220114 01:09:51.432" endtime="20220114 01:09:51.573"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:51.431" endtime="20220114 01:09:51.574"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>//p[contains(text(),'Contrary to popular belief, Lorem Ipsum is not sim')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220114 01:09:51.695" level="INFO">Element '//p[contains(text(),'Contrary to popular belief, Lorem Ipsum is not sim')]' is displayed.</msg>
+<status status="PASS" starttime="20220114 01:09:51.577" endtime="20220114 01:09:51.696"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 01:09:51.697" endtime="20220114 01:09:54.009"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:47.126" endtime="20220114 01:09:54.009"/>
+</test>
+<test id="s1-s3-t3" name="Click Use Tab">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Tabs Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 01:09:54.030" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:09:54.028" endtime="20220114 01:10:00.755"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:54.026" endtime="20220114 01:10:00.755"/>
+</kw>
+<kw name="Go To Tabs Page" library="widget_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${tabspage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:10:00.757" level="INFO">Opening url 'https://demoqa.com/tabs'</msg>
+<status status="PASS" starttime="20220114 01:10:00.756" endtime="20220114 01:10:01.465"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:00.755" endtime="20220114 01:10:01.465"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:54.022" endtime="20220114 01:10:01.465"/>
+</kw>
+<kw name="Click Tab" library="widget_resource">
+<arg>use</arg>
+<kw name="Click Link" library="Selenium2Library">
+<arg>//a[@id='demo-tab-${tab}']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220114 01:10:01.467" level="INFO">Clicking link '//a[@id='demo-tab-use']'.</msg>
+<status status="PASS" starttime="20220114 01:10:01.467" endtime="20220114 01:10:01.549"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:01.466" endtime="20220114 01:10:01.550"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>//p[contains(text(),'It is a long established fact that a reader will b')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220114 01:10:01.598" level="INFO">Element '//p[contains(text(),'It is a long established fact that a reader will b')]' is displayed.</msg>
+<status status="PASS" starttime="20220114 01:10:01.551" endtime="20220114 01:10:01.598"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 01:10:01.599" endtime="20220114 01:10:03.884"/>
+</kw>
+<status status="PASS" starttime="20220114 01:09:54.018" endtime="20220114 01:10:03.884"/>
+</test>
+<test id="s1-s3-t4" name="Click More Tab">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Tabs Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 01:10:03.903" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:10:03.902" endtime="20220114 01:10:07.570"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:03.899" endtime="20220114 01:10:07.570"/>
+</kw>
+<kw name="Go To Tabs Page" library="widget_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${tabspage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:10:07.571" level="INFO">Opening url 'https://demoqa.com/tabs'</msg>
+<status status="PASS" starttime="20220114 01:10:07.571" endtime="20220114 01:10:08.300"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:07.571" endtime="20220114 01:10:08.300"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:03.896" endtime="20220114 01:10:08.300"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>//*[@id='demo-tab-more' and contains(@class, 'disabled')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220114 01:10:08.581" level="INFO">Element '//*[@id='demo-tab-more' and contains(@class, 'disabled')]' is displayed.</msg>
+<status status="PASS" starttime="20220114 01:10:08.301" endtime="20220114 01:10:08.581"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 01:10:08.590" endtime="20220114 01:10:10.893"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:03.893" endtime="20220114 01:10:10.893"/>
+</test>
+<doc>A test for tabs</doc>
+<status status="PASS" starttime="20220114 01:09:39.967" endtime="20220114 01:10:10.903"/>
+</suite>
+<suite id="s1-s4" name="Tooltip Test" source="C:\Users\Bonnie\Documents\Projects\test-automation-practices\robotframe_tests\widget_testsuite\tooltip_test.robot">
+<test id="s1-s4-t1" name="Tooltip Appears on Button Hover">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Tooltips Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 01:10:10.945" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:10:10.945" endtime="20220114 01:10:14.897"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:10.944" endtime="20220114 01:10:14.898"/>
+</kw>
+<kw name="Go To Tooltips Page" library="widget_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${tooltippage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:10:14.899" level="INFO">Opening url 'https://demoqa.com/tool-tips'</msg>
+<status status="PASS" starttime="20220114 01:10:14.899" endtime="20220114 01:10:15.592"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:14.898" endtime="20220114 01:10:15.592"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:10.943" endtime="20220114 01:10:15.592"/>
+</kw>
+<kw name="Mouseover Hover Button" library="widget_resource">
+<kw name="Mouse Over" library="Selenium2Library">
+<arg>//button[@id='toolTipButton']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220114 01:10:15.595" level="INFO">Simulating Mouse Over on element '//button[@id='toolTipButton']'.</msg>
+<status status="PASS" starttime="20220114 01:10:15.593" endtime="20220114 01:10:15.942"/>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<var>${hover_message}</var>
+<arg>//button[@id='toolTipButton']</arg>
+<arg>aria-describedby</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20220114 01:10:15.973" level="INFO">${hover_message} = buttonToolTip</msg>
+<status status="PASS" starttime="20220114 01:10:15.943" endtime="20220114 01:10:15.973"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:15.593" endtime="20220114 01:10:15.973"/>
+</kw>
+<kw name="Button Tooltip Should Be Visible" library="widget_resource">
+<arg>buttonToolTip</arg>
+<kw name="Element Attribute Value Should Be" library="Selenium2Library">
+<arg>//button[@id='toolTipButton']</arg>
+<arg>aria-describedby</arg>
+<arg>${hover_message}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<msg timestamp="20220114 01:10:16.007" level="INFO">Element '//button[@id='toolTipButton']' attribute 'aria-describedby' contains value 'buttonToolTip'.</msg>
+<status status="PASS" starttime="20220114 01:10:15.975" endtime="20220114 01:10:16.007"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:15.974" endtime="20220114 01:10:16.007"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 01:10:16.008" endtime="20220114 01:10:18.380"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:10.941" endtime="20220114 01:10:18.380"/>
+</test>
+<test id="s1-s4-t2" name="Tooltip Appears on Textfield Hover">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Tooltips Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 01:10:18.399" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:10:18.396" endtime="20220114 01:10:22.045"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:18.394" endtime="20220114 01:10:22.046"/>
+</kw>
+<kw name="Go To Tooltips Page" library="widget_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${tooltippage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:10:22.047" level="INFO">Opening url 'https://demoqa.com/tool-tips'</msg>
+<status status="PASS" starttime="20220114 01:10:22.047" endtime="20220114 01:10:23.002"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:22.046" endtime="20220114 01:10:23.003"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:18.392" endtime="20220114 01:10:23.003"/>
+</kw>
+<kw name="Mouseover Textfield" library="widget_resource">
+<kw name="Mouse Over" library="Selenium2Library">
+<arg>//input[@id='toolTipTextField']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220114 01:10:23.006" level="INFO">Simulating Mouse Over on element '//input[@id='toolTipTextField']'.</msg>
+<status status="PASS" starttime="20220114 01:10:23.006" endtime="20220114 01:10:23.348"/>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<var>${hover_textfield}</var>
+<arg>//input[@id='toolTipTextField']</arg>
+<arg>aria-describedby</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20220114 01:10:23.376" level="INFO">${hover_textfield} = textFieldToolTip</msg>
+<status status="PASS" starttime="20220114 01:10:23.348" endtime="20220114 01:10:23.376"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:23.005" endtime="20220114 01:10:23.376"/>
+</kw>
+<kw name="Textfield Tooltip Should Be Visible" library="widget_resource">
+<arg>textFieldToolTip</arg>
+<kw name="Element Attribute Value Should Be" library="Selenium2Library">
+<arg>//input[@id='toolTipTextField']</arg>
+<arg>aria-describedby</arg>
+<arg>${hover_text}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<msg timestamp="20220114 01:10:23.409" level="INFO">Element '//input[@id='toolTipTextField']' attribute 'aria-describedby' contains value 'textFieldToolTip'.</msg>
+<status status="PASS" starttime="20220114 01:10:23.378" endtime="20220114 01:10:23.409"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:23.377" endtime="20220114 01:10:23.409"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 01:10:23.410" endtime="20220114 01:10:25.743"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:18.389" endtime="20220114 01:10:25.743"/>
+</test>
+<test id="s1-s4-t3" name="Tooltip Appears on Text Hover">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Go To Website</arg>
+<arg>AND</arg>
+<arg>Go To Tooltips Page</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Go To Website" library="general">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220114 01:10:25.764" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20220114 01:10:25.762" endtime="20220114 01:10:29.484"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:25.760" endtime="20220114 01:10:29.485"/>
+</kw>
+<kw name="Go To Tooltips Page" library="widget_resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>${tooltippage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220114 01:10:29.486" level="INFO">Opening url 'https://demoqa.com/tool-tips'</msg>
+<status status="PASS" starttime="20220114 01:10:29.485" endtime="20220114 01:10:30.178"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:29.485" endtime="20220114 01:10:30.179"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:25.757" endtime="20220114 01:10:30.179"/>
+</kw>
+<kw name="Mouseover Text" library="widget_resource">
+<kw name="Mouse Over" library="Selenium2Library">
+<arg>//a[contains(text(),'Contrary')]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220114 01:10:30.183" level="INFO">Simulating Mouse Over on element '//a[contains(text(),'Contrary')]'.</msg>
+<status status="PASS" starttime="20220114 01:10:30.182" endtime="20220114 01:10:30.501"/>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<var>${hover_text}</var>
+<arg>//a[contains(text(),'Contrary')]</arg>
+<arg>aria-describedby</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20220114 01:10:30.664" level="INFO">${hover_text} = contraryTexToolTip</msg>
+<status status="PASS" starttime="20220114 01:10:30.501" endtime="20220114 01:10:30.664"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:30.182" endtime="20220114 01:10:30.665"/>
+</kw>
+<kw name="Text Tooltip Should Be Visible" library="widget_resource">
+<arg>contraryTexToolTip</arg>
+<kw name="Element Attribute Value Should Be" library="Selenium2Library">
+<arg>//a[contains(text(),'Contrary')]</arg>
+<arg>aria-describedby</arg>
+<arg>${hover_text}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<msg timestamp="20220114 01:10:30.700" level="INFO">Element '//a[contains(text(),'Contrary')]' attribute 'aria-describedby' contains value 'contraryTexToolTip'.</msg>
+<status status="PASS" starttime="20220114 01:10:30.667" endtime="20220114 01:10:30.700"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:30.666" endtime="20220114 01:10:30.700"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220114 01:10:30.701" endtime="20220114 01:10:33.036"/>
+</kw>
+<status status="PASS" starttime="20220114 01:10:25.752" endtime="20220114 01:10:33.036"/>
+</test>
+<doc>A test for tool tips</doc>
+<status status="PASS" starttime="20220114 01:10:10.917" endtime="20220114 01:10:33.045"/>
+</suite>
+<status status="PASS" starttime="20220114 01:08:09.767" endtime="20220114 01:10:33.064"/>
+</suite>
+<statistics>
+<total>
+<stat pass="18" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="18" fail="0" skip="0" id="s1" name="Widget Testsuite">Widget Testsuite</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="Accordian Test">Widget Testsuite.Accordian Test</stat>
+<stat pass="8" fail="0" skip="0" id="s1-s2" name="Autocomplete Test">Widget Testsuite.Autocomplete Test</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s3" name="Tabs Test">Widget Testsuite.Tabs Test</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s4" name="Tooltip Test">Widget Testsuite.Tooltip Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

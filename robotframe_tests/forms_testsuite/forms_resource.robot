@@ -1,9 +1,10 @@
 *** Settings ***
 Library    Selenium2Library
+Resource    ../resources/general.robot
 
 *** Variables ***
-${browser}  chrome
-${url}     https://demoqa.com/automation-practice-form
+${practicelink}    automation-practice-form
+${practicepage}    https://demoqa.com/${practicelink}
 
 *** Keywords ***
 Choose Image File
@@ -59,9 +60,9 @@ Gender Field Should Be Red
     ${style}=   Get Element Attribute   css:style   custom-control-label
     log to console   ${style}
 
-Go To Website
-    Open Browser    ${url}  ${browser}
-
+Go To Practice Page
+    Go To   ${practicepage}
+    
 Image Name Should Be on Modal
     element should contain      //body/div[4]/div[1]/div[1]/div[2]/div[1]/table[1]      min2bg.jpg
 

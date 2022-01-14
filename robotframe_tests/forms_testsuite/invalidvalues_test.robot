@@ -2,8 +2,9 @@
 Documentation    A test suite for submitting a student form
 Library          Selenium2Library
 Resource         forms_resource.robot
-Suite Setup      Go To Website
-Suite Teardown   Close Browser
+Test Setup       Run Keywords      Go To Website 
+...              AND    Go To Practice Page
+Test Teardown    Close Browser
 Test Template    Invalid Values
 
 *** Test Cases ***          ${value}
