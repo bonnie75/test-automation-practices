@@ -36,6 +36,7 @@ Click Set Button
 
 Clipboard Should Display Text
     [Arguments]     ${text}
+    wait until page contains element    accessibility_id=${text}    timeout=10 seconds
     element should be Visible   accessibility_id=${text}
 
 Enter Clipboard Text

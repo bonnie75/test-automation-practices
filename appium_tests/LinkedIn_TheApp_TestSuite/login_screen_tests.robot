@@ -35,9 +35,6 @@ Click Login Button
     Click element    //android.view.ViewGroup[@content-desc="loginBtn"]
     wait until page contains element    id=android:id/alertTitle   timeout=10 seconds
 
-Click OK Button
-    click element    id=android:id/button1
-
 Enter Username
     Wait until page contains element   accessibility_id=username    timeout=10 seconds
     input text  accessibility_id=username   foo
