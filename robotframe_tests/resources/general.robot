@@ -8,3 +8,4 @@ ${url}      https://demoqa.com/
 *** Keywords ***
 Go To Website
     Open Browser    ${url}  ${browser}
+

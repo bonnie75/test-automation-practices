@@ -7,14 +7,14 @@ Test Setup       Run Keywords      Go To Website
 Test Teardown    Close Browser
 Test Template    Invalid Values
 
-*** Test Cases ***          ${value}
+*** Test Cases ***          VALUE
 empty phone field           ${empty}        
 less than 10 digits         123
 negative phone values       -543764339
 
 *** Keywords ***
 Invalid Values
-    [Arguments]     ${VALUE}
+    [Arguments]     ${value}
     Enter First Name
     Enter Last Name
     Select Gender Option

@@ -6,13 +6,13 @@ Test Setup       Go To Website
 Test Teardown    Close Browser
 Test Template    Open Modal Sizes
 
-*** Test Cases ***      ${size}     ${modalsize}
+*** Test Cases ***      SIZE     MODALSIZE
 Small Modal             Small       sm
 Large Modal             Large       lg
 
 *** Keywords ***
 Open Modal Sizes
-    [Arguments]     ${SIZE}     ${MODALSIZE}
+    [Arguments]     ${size}     ${modalsize}
     Go to Modal Page
     Click Modal Button  ${size}
     Modal Should Be Visible     ${modalsize}

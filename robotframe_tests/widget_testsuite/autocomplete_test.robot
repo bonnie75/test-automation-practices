@@ -4,8 +4,7 @@ Library          Selenium2Library
 Resource         widget_resource.robot
 Test Setup       Run Keywords   Go To Website
 ...              AND    Go To Autocomplete Page
-Test Teardown    Close Browser
-Test Template    
+Test Teardown    Close Browser    
 
 *** Test Cases ***
 Type Multiple Colour Names
