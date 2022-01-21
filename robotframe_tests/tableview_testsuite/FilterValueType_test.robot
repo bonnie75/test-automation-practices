@@ -6,13 +6,13 @@ Test Setup       Go To Table Page
 Test Teardown    Close Browser
 Test Template    Filter Name By
 
-*** Test Cases ***      ${value}    
+*** Test Cases ***      VALUE    
 Characters              ibm
 Numbers                  12
 
 *** Keywords ***
 Filter Name By  
-    [Arguments]     ${VALUE}
+    [Arguments]     ${value}
     Enter Filter Value      ${value}
     Click Filter By Name Button
     Table Should Be Visible

@@ -6,13 +6,13 @@ Test Setup       Go To Website
 Test Teardown    Close Browser
 Test Template    Open New Page
 
-*** Test Cases ***      ${button}
+*** Test Cases ***      BUTTON
 New Tab                 tab
 New Window              window
 
 *** Keywords ***
 Open New Page       
-    [Arguments]     ${BUTTON}
+    [Arguments]     ${button}
     Go To Browser Page
     Click ${button} Button
     New ${button} Should Be Visible

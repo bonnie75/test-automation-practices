@@ -6,7 +6,7 @@ Suite Setup       Go To Table Page
 Suite Teardown    Close Browser
 Test Template    Sort Order
 
-*** Test Cases ***          ${header}       ${order}    ${name}
+*** Test Cases ***          HEADER           ORDER	NAME
 Computer Name Ascending      name             asc       Computer name
 Computer Name Descending     name             desc      Computer name
 Introduced Descending        introduced       desc      Introduced
@@ -18,6 +18,6 @@ Company Name Ascending       companyName      asc       Company
 
 *** Keywords ***
 Sort Order
-    [Arguments]     ${HEADER}   ${ORDER}    ${NAME}
+    [Arguments]     ${header}   ${order}    ${name
     Click Header    ${name}
     List Should Be Sorted in Order      ${header}   ${order}    ${name}
